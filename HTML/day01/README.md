@@ -83,7 +83,7 @@ ssh即安全外壳协议，下面引用百度百科的解释：
 
 总之就是一种比较安全的远程登录协议。
 
-参考阮一峰的网络日志：(SSH原理与运用（一）：远程登录)[http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html]
+参考阮一峰的网络日志：[SSH原理与运用（一）：远程登录](http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html)
 
 ### 什么是公钥？
 
@@ -97,7 +97,7 @@ ssh即安全外壳协议，下面引用百度百科的解释：
 - 任何人都知道我的加密算法，但只有我自己知道解密算法；
 - 当别人使用我的加密算法加密信息并发送给我，信息是安全的，因为只有我拥有解密算法。
 
-参考阮一峰的网络日志：(数字签名是什么？)[http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html]
+参考阮一峰的网络日志：[数字签名是什么？](http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html)
 
 ## 其他
 
