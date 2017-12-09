@@ -101,4 +101,4 @@ ssh即安全外壳协议，下面引用百度百科的解释：
 
 ## 其他
 
-归档： <http://blog.smallyu.net/2017/12/09/%E5%9F%B9%E8%AE%AD%E7%AC%AC%E4%B8%80%E5%A4%A9/>
+归档： [培训第一天](http://blog.smallyu.net/2017/12/09/%E5%9F%B9%E8%AE%AD%E7%AC%AC%E4%B8%80%E5%A4%A9/)
