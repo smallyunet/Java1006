@@ -2,12 +2,12 @@
 
 ## git的安装使用
 
-### git安装
+### git的安装
 
 选择使用gitee代码仓库进行内容的版本控制。Windows下直接运行git安装包进行安装。
 
 
-### git使用
+### git的使用
 
 git安装后，使用命令配置用户信息：
 
@@ -72,6 +72,32 @@ Windows下解压安装。
 任意新建工程，右键点击，New > Edit File Templates...，新建模板Name: MarkDown File，Extension: md，确定保存。
 
 这样webstorm就可以完备地支持markdown文件了。
+
+## 课下问题
+
+### 什么是ssh？
+
+ssh即安全外壳协议，下面引用百度百科的解释：
+
+> SSH 为 Secure Shell 的缩写，由 IETF 的网络小组（Network Working Group）所制定；SSH 为建立在应用层基础上的安全协议。SSH 是目前较可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用 SSH 协议可以有效防止远程管理过程中的信息泄露问题。
+
+总之就是一种比较安全的远程登录协议。
+
+参考阮一峰的网络日志：(SSH原理与运用（一）：远程登录)[http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html]
+
+### 什么是公钥？
+
+公钥即公开密钥加密，下面引用维基百科的解释：
+
+> 公开密钥加密（英语：Public-key cryptography），也称为非对称加密（英语：asymmetric cryptography），是密码学的一种算法，它需要两个密钥，一个是公开密钥，另一个是私有密钥；一个用作加密的时候，另一个则用作解密。
+
+维基百科对于加密过程还为我们提供了典型的爱丽丝与鲍伯假设，大概意思就是：
+
+- 我有一套加密算法和解密算法；
+- 任何人都知道我的加密算法，但只有我自己知道解密算法；
+- 当别人使用我的加密算法加密信息并发送给我，信息是安全的，因为只有我拥有解密算法。
+
+参考阮一峰的网络日志：(数字签名是什么？)[http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html]
 
 ## 其他
 
