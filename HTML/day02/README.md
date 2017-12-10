@@ -88,7 +88,7 @@ usemap  用于链接map映射，chrome不支持，火狐支持
 
 今天用金山打字通的单词练习测试打字速度，结果为：
 
-{% asset_img testing.png %}
+![testing.png](./images/testing.png)
 
 ## 课下问题
 
