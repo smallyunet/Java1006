@@ -95,16 +95,16 @@ usemap  用于链接map映射，chrome不支持，火狐支持
 ### 回顾MarkDown语法
 
 ```
-*文本*    斜体文本
-**文本**  粗体文本
-# 文本    一级标题
-## 文本   二级标题，最多六级
-[链接](http://xxx.xxx)    外链接
-*，+，-   无序列表
-1. 2. 3. 有序列表
->   	 文字引用
-`hello`  行内代码
-```hello``` 代码块
+*文本*    		斜体文本
+**文本**  		粗体文本
+# 文本    		一级标题
+## 文本   		二级标题，最多六级
+[链接](http://xxx.xxx)   外链接
+*，+，-   		无序列表
+1. 2. 3. 		有序列表
+>   	 		文字引用
+`hello`  		行内代码
+```hello``` 		代码块
 ```
 
 参考阅读：[Cmd Markdown 简明语法手册](https://www.zybuluo.com/mdeditor?url=https%3A%2F%2Fwww.zybuluo.com%2Fstatic%2Feditor%2Fmd-help.markdown)
@@ -130,3 +130,10 @@ usemap  用于链接map映射，chrome不支持，火狐支持
 ## 其他
 
 归档： [培训第二天](http://blog.smallyu.net/2017/12/10/%E5%9F%B9%E8%AE%AD%E7%AC%AC%E4%BA%8C%E5%A4%A9/)
+
+
+## 补充 2017.12.14
+
+打字测速：
+
+![testing.png](./images/testing2.png)
