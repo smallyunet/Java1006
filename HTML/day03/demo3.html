@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>frameset</title>
+</head>
+
+<!--重构body标签，和body不共存，rows设置行高，cols设置列宽-->
+<frameset rows="15%,85%">
+    <!--引入页面-->
+    <frame src="top.html" />
+    <!--嵌套-->
+    <frameset cols="15%,85%">
+        <frame src="left.html" />
+        <frame src="right.html" name="right" />
+    </frameset>
+</frameset>
+
+
+</html>

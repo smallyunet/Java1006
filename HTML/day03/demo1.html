@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表相关元素</title>
+</head>
+<body>
+
+<!--ol标签用来定义有序列表-->
+    <ol>
+        <!--li标签用来指定列表中的每一个列表项-->
+        <li>上海</li>
+        <li>北京</li>
+        <li>深圳</li>
+        <li>上海</li>
+        <li>北京</li>
+        <li>深圳</li>
+    </ol>
+
+<!--ol标签的type属性用来指定有序列表的递增标题-->
+    <ol type="i">
+        <li>上海</li>
+        <li>北京</li>
+        <li>深圳</li>
+        <li>上海</li>
+        <li>北京</li>
+        <li>深圳</li>
+    </ol>
+
+<!--start属性用来指定列表项开始的位置-->
+    <ol start="3">
+        <li>上海</li>
+        <li>北京</li>
+        <li>深圳</li>
+        <li>上海</li>
+        <li>北京</li>
+        <li>深圳</li>
+    </ol>
+
+<!--start属性只能指定为数字-->
+    <ol type="i" start="3">
+        <li>上海</li>
+        <li>北京</li>
+        <li>深圳</li>
+        <li>上海</li>
+        <li>北京</li>
+        <li>深圳</li>
+    </ol>
+
+<!--ul标签用来指定无序列表-->
+    <ul>
+        <li>上海</li>
+        <li>北京</li>
+        <li>深圳</li>
+        <li>上海</li>
+        <li>北京</li>
+        <li>深圳</li>
+    </ul>
+
+<!--ul标签的type属性可以指定列表项前的显示符号-->
+    <ul type="circle">
+        <li>上海</li>
+        <li>北京</li>
+        <li>深圳</li>
+        <li>上海</li>
+        <li>北京</li>
+        <li>深圳</li>
+    </ul>
+
+    <ul type="square">
+        <li>上海</li>
+        <li>北京</li>
+        <li>深圳</li>
+        <li>上海</li>
+        <li>北京</li>
+        <li>深圳</li>
+    </ul>
+
+<!--列表嵌套，语义上实现嵌套效果，在li标签里加入ul标签-->
+<ol>
+    <li>山西
+        <ul>
+            <li>运城</li>
+            <li>太原</li>
+            <li>临汾</li>
+            <li>大同</li>
+        </ul>
+    </li>
+
+    <li>山东
+        <ul>
+            <li>济南</li>
+            <li>青岛</li>
+            <li>烟台</li>
+            <li>威海</li>
+        </ul>
+    </li>
+</ol>
+
+<!--dl用于自定义列表，dt为标题列表项，dd为普通列表项-->
+<dl>
+    <dt>山西</dt>
+    <dd>太原</dd>
+    <dd>临汾</dd>
+    <dd>大同</dd>
+</dl>
+
+
+</body>
+</html>
