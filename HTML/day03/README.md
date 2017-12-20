@@ -105,6 +105,54 @@
     button      普通按钮
 ```
 
+## 课下问题
+
+### 什么是GET和POST？
+
+课程中提到，form表单的method属性指定表单提交的方式，包括GET和POST。GET和POST最直观的区别就是GET提交的数据会显示在URL中，可以被直接读取。
+
+GET提交的数据是跟随URL作为参数被传送到目标地址的，那POST提交的数据又放在什么地方呢？HTTP协议规定，POST提交的数据必须放在消息主体（entity-body）中。
+
+HTTP又是什么？综合不同文档的定义，HTTP协议基于TCP/IP协议，是一种属于应用层的规范，具体实现了TCP/IP协议关于数据如何在万维网中通信的规范。
+
+规范把HTTP请求分为三部分：状态行、请求头、消息主体。每一次POST请求都会向服务器发送这三部分内容，其中POST要提交的数据就在消息主体中。
+
+使用课堂中做练习的demo6.html和address.html为例，POST方法提交表单数据的包内容如图所示：
+
+![http_post](./images/http_post.png)
+
+可以看到表单数据清晰地显示在了Form Data中，还包括HTTP请求的一些其他参数，如Request URL指出了form表单提交的目标地址，因此所谓GET方法显示数据，POST方法不显示的说法并不准确，也因此，更为安全的HTTPS协议才被广泛应用。
+
+参考阅读：[HTTP的POST提交的四种常见消息主体格式](http://blog.csdn.net/zhongzh86/article/details/51354920)
+
+### GET和POST的区别？
+
+表现上，GET和POST的区别也许是数据封装位置的不同，浏览器对两种请求方法处理方式的不同，以及对编码方式的支持不同，安全性不同等等，w3school对于GET和POST提供了比较标准的描述，参考阅读：[HTTP 方法：GET 对比 POST](http://www.w3school.com.cn/tags/html_ref_httpmethods.asp)
+
+但是，GET和POST都基于TCP/IP的规范，本质都是TCP连接，所以也有观点认为它们是没有太大区别的，参考阅读：[99%的人都理解错了HTTP中GET与POST的区别](http://mp.weixin.qq.com/s?__biz=MzI3NzIzMzg3Mw==&mid=100000054&idx=1&sn=71f6c214f3833d9ca20b9f7dcd9d33e4#rd)
+
+不过，即使是认为GET/POST区别不大的文章，也提到了它们有一个重大的区别，那就是GET只产生一个TCP数据包，而POST通常产生两个。
+
+此外，还有一个叫幂等的概念需要注意，GET方法是幂等的，POST方法是非幂等的，参考阅读：[浅谈HTTP中Get与Post的区别](http://www.cnblogs.com/hyddd/archive/2009/03/31/1426026.html)
+
+### GET和POST之外？
+
+HTTP协议的请求方式当然不止GET/POST两种，还有PUT、DELETE等多种。目前使用最多的只有GET/POST，并且这两种方法就可以满足我们日常的使用。一般认为定义了多种请求方式是为了提供语义上的支持，比如RESTful就可能会把HTTP的请求方式考虑进去。
+
+关于HTTP协议解释比较全面的文章，参考阅读：[HTTP协议详解（真的很经典）](http://www.cnblogs.com/li0803/archive/2008/11/03/1324746.html)
+
+### 什么是HTTPS？
+
+上面说HTTP协议的GET和POST方法都不是安全的，而HTTPS协议是安全的。引用百度百科的定义：
+
+> HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer），是以安全为目标的HTTP通道，简单讲是HTTP的安全版。即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。
+
+那ssl又是什么？培训第一天的课程笔记中提到了ssh，从结果上认识ssh的话，ssh就是一种能保证数据在远程传输中安全性的协议。ssl不同于ssh，但功能上都是为了保证数据传输的安全。
+
+### SSL和SSH的区别？
+
+参考阅读：[SSL和SSH的区别](http://blog.csdn.net/simanstar/article/details/40592057)
+
 ## 其他
 
 归档： [培训第三天](http://blog.smallyu.net/2017/12/17/%E5%9F%B9%E8%AE%AD%E7%AC%AC%E4%B8%89%E5%A4%A9/)
@@ -122,3 +170,7 @@
 ### 2017.12.19
 
 ![testing.png](./images/testing3.png)
+
+### 2017.12.20
+
+![testing.png](./images/testing4.png)
