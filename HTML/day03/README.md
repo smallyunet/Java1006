@@ -174,3 +174,11 @@ HTTP协议的请求方式当然不止GET/POST两种，还有PUT、DELETE等多�
 ### 2017.12.20
 
 ![testing.png](./images/testing4.png)
+
+### 2017.12.22
+
+![testing.png](./images/testing5.png)
+
+![testing.png](./images/testing6.png)
+
+![testing.png](./images/testing7.png)
