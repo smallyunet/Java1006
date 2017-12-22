@@ -2,7 +2,7 @@
 
 Java程序的运行会经过两个过程，开发者编写.java文件，经过编译生成.class字节码文件，再由程序执行.class文件。
 
-![getStart.png](https://gitee.com/ychs168/Java1006/blob/wangyu/Java/self-study/Java%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98%E7%BB%8F%E5%85%B8/%E7%AC%AC1%E7%AB%A0/images/getStart.png)
+![getStart.png](./images/getStart.png)
 
 .java文件是有我们编写的源文件，.class文件是字节码文件，与设备无关，可以用记事本打开看到，储存的是十六进制的数据。.class文件是在JVM上运行的，Java VM是Java自带的虚拟机，与平台相关，负责将字节码文件翻译成对应平台可执行的机器码。
 
