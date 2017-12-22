@@ -182,3 +182,5 @@ HTTP协议的请求方式当然不止GET/POST两种，还有PUT、DELETE等多�
 ![testing.png](./images/testing6.png)
 
 ![testing.png](./images/testing7.png)
+
+![testing.png](./images/testing8.png)
