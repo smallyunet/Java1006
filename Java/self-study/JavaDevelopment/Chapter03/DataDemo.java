@@ -76,3 +76,52 @@ class DataDemo07 {
 		System.out.println("flag = " + flag);
 	}
 }
+
+/**
+ * 数据类型的转换
+ */
+class DataDemo08 {
+	public static void main(String[] args) {
+		int x = 30;
+		float y = 22.19f;
+		System.out.println("x/y = " + (x/y));		// 浮点型
+		System.out.println("10/3.5 = " + (10/3.5));	// 浮点型
+		System.out.println("10/3 = " + (10/3));		// 整型
+	}
+}
+
+/**
+ * 定义字符串变量
+ */
+class DataDemo09 {
+	public static void main(String[] args) {
+		String str = "smallyu";
+		int x = 30;
+		str = str + x;	// 任何数据类型遇到String类型都会向String类型转换
+		System.out.println("str = " + str);	
+	}
+}
+
+/**
+ * 字符串常量操作的问题
+ */
+class DataDemo10 {
+	public static void main(String[] args) {
+		int i = 1;
+		int j = 2;
+		System.out.println("1 + 2 = " + i + j);	
+		// 运行结果会是12，如果想要得到数据运算的结果，需要在i、j两侧加括号(i + j)
+	}
+}
+
+/**
+ * 数据类型的强制转换
+ */
+class DataDemo11 {
+	public static void main(String[] args) {
+		float f = 30.3f;
+		int x = (int) f;		// 强制转换为int型
+		System.out.println("x = " + x);
+		System.out.println("10 / 3 = " + ((float) 10 / 3));	 //常量计算使用强制类型转换
+	}
+}
