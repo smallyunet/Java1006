@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+    <style>
+        div {
+            width:100px;
+            height:100px;
+            background-color: yellow;
+            margin-bottom: 5px;
+        }
+        div[id] {
+            background-color: red;
+        }
+        div[id="aabb"] {
+            background-color: black;
+        }
+        div[id^="b"] {
+            background-color: blue;
+        }
+        /*div[id$="a"] {*/
+            /*background-color: green;*/
+        /*}*/
+        /*div[id*="a"] {*/
+        /*background-color: green;*/
+        /*}*/
+    </style>
+</head>
+<body>
+
+    <div id="aabb"></div>
+    <div id="aabbaa"></div>
+    <div id="bbaa"></div>
+    <div id="bbaabb"></div>
+    <div id="ababab"></div>
+    <div id="bababa"></div>
+    <div></div>
+    <div></div>
+
+</body>
+</html>

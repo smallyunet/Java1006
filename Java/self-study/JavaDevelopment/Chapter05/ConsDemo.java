@@ -33,7 +33,7 @@ class Person {
 	}
 }
 
-public class ConsDemo01 {
+public class ConsDemo {
 	public static void main(String args[]) {
 		System.out.println("声明对象：Person per = null;");
 		Person per = null;		// 声明对象时不调用构造方法

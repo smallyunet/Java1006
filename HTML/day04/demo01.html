@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input相关属性</title>
+</head>
+<body>
+
+<!--
+    checked         默认选中，只针对单选框和复选框
+    disabled        禁用元素
+    maxlength       指定文本框输入最大字符数
+    placeholder     设置文本框内容的描述
+    readonly        只读，只针对文本框
+    size            设置元素宽度，文本框有效
+-->
+<form>
+    用户名：<input type="text" name="username" value="smallyu" readonly size="24"><br>
+    密码：<input type="password" name="password" value="" placeholder="密码" maxlength="4"><br>
+    性别：<input type="radio" name="sex" value="male" checked>男 <input type="radio" name="sex" value="female">女<br>
+    爱好：<input type="checkbox" name="favorite" value="pvp" checked>王者荣耀
+    <input type="checkbox" name="favorite" value="cos">英魂之刃
+    <input type="checkbox" name="favorite" value="grub">绝地求生<br>
+    头像：<input type="file" name="photo" value=""><br>
+
+    <!--
+        <select>        定义下拉列表
+        <option>        定义单个选项
+            selected    默认选中
+            value       值
+        <optgroup>      定义列表项分组
+            label       设置分组名称，一般必填
+    -->
+
+    籍贯：<select name="location">
+        <option value="beijing">北京</option>
+        <option value="shanghai" selected>上海</option>
+        <option value="guangzhou">广州</option>
+        <option value="shenzhen">深圳</option>
+        </select>
+
+    血型：<select name="bloodtype">
+        <optgroup label="普通血型">
+            <option value="a">A型</option>
+            <option value="b">B型</option>
+            <option value="c" disabled>C型</option>
+        </optgroup>
+        <optgroup label="特殊血型">
+            <option value="d">D型</option>
+            <option value="e" selected>E型</option>
+        </optgroup>
+        </select>
+
+    <br>
+
+    留言板：<textarea cols="30" rows="5"></textarea>
+
+    <br>
+    <input type="submit" value="提交"> <input type="reset" value="重置"> <input type="button" value="按钮" disabled><br>
+    <button type="submit">提交</button> <button type="reset">重置</button> <button type="button">按钮</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+    <style>
+        #p1 {
+            color: aqua;
+        }
+
+        .p2 {
+            color: red;
+        }
+
+
+        p > em {
+            color: red;
+        }
+        p > em > b {
+            color: blue;
+        }
+        p > b {
+            color: yellow;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <p id="p1">这是一段文本</p>
+
+    <div class="p2">这是一段文本</div>
+    <span class="p2">这是一段文本</span><br>
+    <em class="p2">这是一段文本</em>
+    <p class="p2">这是一段文本</p>
+
+    <p>鬓云欲度香腮雪，<em>弄妆<b>梳洗迟</b></em></p>
+
+</body>
+</html>

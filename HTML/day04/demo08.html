@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素选择器</title>
+    <style>
+        p:first-letter {
+            font-size:20pt;
+            color:blue;
+        }
+        p:first-line {
+            color:red;
+        }
+        p:before{
+            content:"这是前置文本";
+        }
+        p:after{
+            content:"这是后置文本";
+        }
+    </style>
+</head>
+<body>
+
+    <p>
+        id选择器，使用符号"#"以`#value`的形式选择元素id为value的元素。
+
+        类选择器，使用符号"."以`.value`的形式选择元素class为value的元素。
+
+        子代选择器，使用符号">"以`f > c`的形式选择元素f的子元素c。
+
+        后代选择器，使用空格" "以`f c`的形式选择元素f的后代元素c。
+
+        兄弟选择器，使用符号"~"以`b1~b2`的形式选择与元素b1同级并位于其后的所有b2元素。
+
+        相邻兄弟选择器，使用符号"+"以`b1+b2`的形式选择与元素b1同级并位于其后的第一个b2元素。
+
+        任意种类的元素选择器都可以使用逗号隔开，以同时使用多种选择器，选中需要选中的多个元素
+    </p>
+
+</body>
+</html>

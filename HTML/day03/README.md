@@ -94,11 +94,13 @@
 
 ```
 <form>          定义表单元素
+    action      设置表单提交目标地址
+    method      表单提交方式
 <input>         定义输入框
     text        普通文本框
     password    密码文本框
     radio       单选按钮
-    checkout    复选按钮
+    checkbox    复选按钮
     file        文件选择框
     submit      提交按钮
     reset       重置按钮
