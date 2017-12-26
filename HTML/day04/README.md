@@ -137,3 +137,9 @@ Cache-control策略与Expires类似，但是指定项更多、更全面。
 ### 2017.12.24
 
 ![testing.png](./images/testing2.png)
+
+### 2017.12.26
+
+![testing.png](./images/testing3.png)
+
+![testing.png](./images/testing4.png)
