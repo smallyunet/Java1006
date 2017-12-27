@@ -1,4 +1,6 @@
 
+/* 尝试第一个Node.js程序，程序会在本地3000端口返回Hello World */
+
 var http = require('http');
 
 http.createServer(function(req, res) {

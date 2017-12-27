@@ -17,3 +17,8 @@ class Demo3{ ... }
 ```
 执行`javac Demo.java`命令后，会生成三个文件Demo.class、Demo2.class、Demo3.class。
 
+## 案例代码
+
+- TestJava.java （基本输出）
+
+- TestOther.java （类的声明）

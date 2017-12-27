@@ -35,7 +35,7 @@ class RefDemo02 {
 }
 
 /**
- * 引用传递范例一
+ * 引用传递范例三
  * 对象的属性被改变了
  */
 class Demo03 {
@@ -51,5 +51,29 @@ class RefDemo03 {
 	}
 	public static void fun(Demo03 d2) {
 		d2.temp = "world";
+	}
+}
+
+/**
+ * 接受自己本类的对象
+ */
+class Demo04 {
+	private int temp = 30;
+	public void fun(Demo04 d2) {
+		d2.temp = 50;
+	}
+	public int getTemp() {
+		return temp;
+	}
+	public void setTemp(int t) {
+		temp = t;
+	}
+}
+class RefDemo04 {
+	public static void main(String[] args) {
+		Demo04 d1 = new Demo04();
+		d1.setTemp(50);
+		d1.fun(d1);		// 这里把Demo的对象穿回到了自己的类中
+		System.out.println("temp = " + d1.getTemp());
 	}
 }

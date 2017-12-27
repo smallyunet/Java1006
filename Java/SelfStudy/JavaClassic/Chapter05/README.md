@@ -49,5 +49,10 @@ for(int i = 0; i < 100; i++) {
 对于String类型的变量，如果是作为对象的一个属性作为变量，则可以被正常修改。
 
 
-126页5.8.2
+## 案例代码
 
+- ConsDemo.java （构造方法示例）
+- StringAPIDemo.java （String对象常用方法）
+- RefDemo.java （对象的引用传递）
+
+127页5.8.3

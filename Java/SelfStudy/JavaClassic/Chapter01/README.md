@@ -24,3 +24,7 @@ set classpath=F:\test
 然后继续在命令行中执行java Hello命令，理论上Java会无错误地执行。
 
 因为classpath只在程序运行时起作用，并不能直接写到源程序中生效，所以也许classpath属性在开发中很少用到。
+
+## 案例代码
+
+- Hello.java （Hello World程序）
