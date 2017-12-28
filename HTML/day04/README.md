@@ -45,11 +45,11 @@ size            设置元素宽度，文本框有效
 
 ### 样式的引入
 
-内嵌样式将样式直接写在标签的style属性中。
+- 内嵌样式将样式直接写在标签的style属性中。
 
-内部样式将样式写在head标签的style标签中。
+- 内部样式将样式写在head标签的style标签中。
 
-外部样式在head标签中使用link标签链接，同时设置rel为stylesheet指明文档与被链接文档之间的关系。
+- 外部样式在head标签中使用link标签链接，同时设置rel为stylesheet指明文档与被链接文档之间的关系。
 
 样式的优先级遵循就近原则，内嵌样式始终是优先级最高的，内部样式和外部样式的优先级会由于标签的位置不同而不同，页面后面加载的会重载之前的。
 
@@ -124,7 +124,7 @@ Cache-control策略与Expires类似，但是指定项更多、更全面。
 
 参考阅读：[浏览器缓存机制](https://www.cnblogs.com/skynet/archive/2012/11/28/2792503.html)
 
-### 像素与分辨率的关系
+### px/dp/dpi的关系
 
 很难的问题，目前没能解决。
 
@@ -151,3 +151,7 @@ Cache-control策略与Expires类似，但是指定项更多、更全面。
 ![testing.png](./images/testing6.png)
 
 ![testing.png](./images/testing7.png)
+
+### 2017.12.27
+
+![testing.png](./images/testing8.png)
