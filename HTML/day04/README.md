@@ -144,7 +144,7 @@ Cache-control策略与Expires类似，但是指定项更多、更全面。
 
 ![testing.png](./images/testing4.png)
 
-### 2017.12.26
+### 2017.12.27
 
 ![testing.png](./images/testing5.png)
 
@@ -152,6 +152,10 @@ Cache-control策略与Expires类似，但是指定项更多、更全面。
 
 ![testing.png](./images/testing7.png)
 
-### 2017.12.27
+### 2017.12.28
 
 ![testing.png](./images/testing8.png)
+
+### 2017.12.29
+
+![testing.png](./images/testing9.png)
