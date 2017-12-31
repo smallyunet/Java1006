@@ -1,1 +1,1 @@
-开始阅读《JavaScript权威指南》这本书
+《JavaScript权威指南》
