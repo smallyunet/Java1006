@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f1229e97-3b1c-49c4-98b1-9e04a899b406" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter01/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter01/server.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter02/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter02/foo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter02/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter03/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter03/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter03/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter04/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter04/app01.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter04/app02.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter04/app03.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter04/app04.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter04/file01.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter04/file02.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter04/index01.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter04/index02.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter05/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter05/server01.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter05/server02.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter05/server03.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter05/server04.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter05/server05.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/express-example/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/express-example/bin/www" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/express-example/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/express-example/public/stylesheets/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/express-example/routes/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/express-example/routes/users.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/express-example/views/error.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/express-example/views/includes/footer.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/express-example/views/index.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/express-example/views/layout.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/bin/www" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/public/stylesheets/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/routes/about.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/routes/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/routes/users.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/views/error.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/views/index.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/views/layout.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/views/user.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/app01.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/app02.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/bin/www" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/public/stylesheets/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/routes/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/routes/users.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/error.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/index.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/layout.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/tasks/edit.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/tasks/index.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/tasks/new.jade" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/file.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React.js/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/React.js/docs/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webpack/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webpack/build-a-hn-front-page/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webpack/build-a-hn-front-page/app/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webpack/build-a-hn-front-page/build/bundle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webpack/build-a-hn-front-page/build/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webpack/build-a-hn-front-page/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webpack/build-a-hn-front-page/webpack.config.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Java1006" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="package_json" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="MarkDown File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>get</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/Java/self-study/Java开发实战经典/第1章</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/CSS/day02/demo3.html" />
+        <option value="$PROJECT_DIR$/CSS/day02/demo1.html" />
+        <option value="$PROJECT_DIR$/CSS/day02/demo2.html" />
+        <option value="$PROJECT_DIR$/CSS/day02/demo4.html" />
+        <option value="$PROJECT_DIR$/CSS/day02/demo07.html" />
+        <option value="$PROJECT_DIR$/CSS/day02/demo5.html" />
+        <option value="$PROJECT_DIR$/CSS/day02/demo6.html" />
+        <option value="$PROJECT_DIR$/Node.js/SelfStudy/Node.jsClassic/Chapter07/express_routing/routes/users.js" />
+        <option value="$PROJECT_DIR$/Node.js/SelfStudy/Node.jsClassic/Chapter07/express_routing/views/user.jade" />
+        <option value="$PROJECT_DIR$/Node.js/SelfStudy/Node.jsClassic/Chapter07/README.md" />
+        <option value="$PROJECT_DIR$/HTML/README.md" />
+        <option value="$PROJECT_DIR$/CSS/day02/demo08.html" />
+        <option value="$PROJECT_DIR$/CSS/day02/demo09.html" />
+        <option value="$PROJECT_DIR$/CSS/day02/demo10.html" />
+        <option value="$PROJECT_DIR$/CSS/day02/demo11.html" />
+        <option value="$PROJECT_DIR$/CSS/day02/demo12.html" />
+        <option value="$PROJECT_DIR$/CSS/day02/demo13.html" />
+        <option value="$PROJECT_DIR$/CSS/day02/demo14.html" />
+        <option value="$PROJECT_DIR$/CSS/day02/demo15.html" />
+        <option value="$PROJECT_DIR$/CSS/day02/demo16.html" />
+        <option value="$PROJECT_DIR$/CSS/day02/demo17.html" />
+        <option value="$PROJECT_DIR$/CSS/README.md" />
+        <option value="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/app01.js" />
+        <option value="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/app02.js" />
+        <option value="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/package.json" />
+        <option value="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/layout.jade" />
+        <option value="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/routes/index.js" />
+        <option value="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/tasks/edit.jade" />
+        <option value="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/tasks/index.jade" />
+        <option value="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/tasks/layout.jade" />
+        <option value="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/tasks/new.jade" />
+        <option value="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/app.js" />
+        <option value="$PROJECT_DIR$/CSS/templates/README.md" />
+        <option value="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/README.md" />
+        <option value="$PROJECT_DIR$/Node.js/Node.jsClassic/README.md" />
+        <option value="$PROJECT_DIR$/Java/SelfStudy/JavaClassic/README.md" />
+        <option value="$PROJECT_DIR$/JavaScript/SelfStudy/JavaScriptGuide/README.md" />
+        <option value="$PROJECT_DIR$/React.js/README.md" />
+        <option value="$PROJECT_DIR$/React.js/FraserXu/README.md" />
+        <option value="$PROJECT_DIR$/React.js/FraserXu/demo1.html" />
+        <option value="$PROJECT_DIR$/React.js/docs/Installation/README.md" />
+        <option value="$PROJECT_DIR$/React.js/docs/README.md" />
+        <option value="$PROJECT_DIR$/React.js/docs/demo1.html" />
+        <option value="$PROJECT_DIR$/webpack/README.md" />
+        <option value="$PROJECT_DIR$/CSS/day01/README.md" />
+        <option value="$PROJECT_DIR$/CSS/day02/README.md" />
+        <option value="$PROJECT_DIR$/HTML/day02/README.md" />
+        <option value="$PROJECT_DIR$/HTML/day03/README.md" />
+        <option value="$PROJECT_DIR$/HTML/day04/README.md" />
+        <option value="$PROJECT_DIR$/TypingSpeed/README.md" />
+        <option value="$PROJECT_DIR$/README.md" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/MERN/Node.jsClassic/Chapter02/node_modules" />
+    <handled-path value="$PROJECT_DIR$/MERN/Node.jsClassic/Chapter06/express-example/node_modules" />
+    <handled-path value="$PROJECT_DIR$/MERN/Node.jsClassic/Chapter07/express_routing/node_modules" />
+    <handled-path value="$PROJECT_DIR$/MERN/Node.jsClassic/Chapter08/connect_to_mongo/node_modules" />
+    <handled-path value="$PROJECT_DIR$/MERN/build-a-hn-front-page/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="377" />
+    <option name="y" value="19" />
+    <option name="width" value="899" />
+    <option name="height" value="700" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Java1006" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java1006" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path" value="/usr/bin/node" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/tasks" />
+      <recent name="$PROJECT_DIR$/CSS/day02/images" />
+      <recent name="$PROJECT_DIR$/CSS/day01" />
+      <recent name="$PROJECT_DIR$/HTML/day04/images" />
+      <recent name="$PROJECT_DIR$/Node.js/SelfStudy/Node.jsClassic" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/HTML/day02/images" />
+      <recent name="$PROJECT_DIR$/CSS/day02/images" />
+      <recent name="$PROJECT_DIR$/Node.js/SelfStudy/Node.jsClassic/Chapter01" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f1229e97-3b1c-49c4-98b1-9e04a899b406" name="Default" comment="" />
+      <created>1513417707934</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1513417707934</updated>
+      <workItem from="1513417709489" duration="18000" />
+      <workItem from="1513431402884" duration="119000" />
+      <workItem from="1513474202462" duration="130000" />
+      <workItem from="1513474372465" duration="3094000" />
+      <workItem from="1513477485476" duration="19535000" />
+      <workItem from="1513773095924" duration="1107000" />
+      <workItem from="1513774250164" duration="28000" />
+      <workItem from="1513922862962" duration="121000" />
+      <workItem from="1513944558306" duration="507000" />
+      <workItem from="1513945082839" duration="23000" />
+      <workItem from="1513945169491" duration="13000" />
+      <workItem from="1513945213958" duration="30000" />
+      <workItem from="1513945400804" duration="11000" />
+      <workItem from="1513945453476" duration="845000" />
+      <workItem from="1513954759526" duration="3508000" />
+      <workItem from="1513959085777" duration="92000" />
+      <workItem from="1513959466392" duration="1523000" />
+      <workItem from="1514021149262" duration="48000" />
+      <workItem from="1514021361127" duration="5189000" />
+      <workItem from="1514078968440" duration="26031000" />
+      <workItem from="1514122865301" duration="494000" />
+      <workItem from="1514123472454" duration="178000" />
+      <workItem from="1514194223031" duration="412000" />
+      <workItem from="1514259216516" duration="2277000" />
+      <workItem from="1514262369948" duration="103000" />
+      <workItem from="1514262830467" duration="70000" />
+      <workItem from="1514271750528" duration="4697000" />
+      <workItem from="1514281176640" duration="53000" />
+      <workItem from="1514281300839" duration="4000" />
+      <workItem from="1514300959841" duration="48000" />
+      <workItem from="1514302589494" duration="1287000" />
+      <workItem from="1514304026803" duration="24000" />
+      <workItem from="1514349290371" duration="73000" />
+      <workItem from="1514385640674" duration="2247000" />
+      <workItem from="1514466774472" duration="5797000" />
+      <workItem from="1514472650264" duration="514000" />
+      <workItem from="1514473520024" duration="63000" />
+      <workItem from="1514557746768" duration="5841000" />
+      <workItem from="1514597061998" duration="24511000" />
+      <workItem from="1514641744531" duration="513000" />
+      <workItem from="1514642443811" duration="11728000" />
+      <workItem from="1514694764227" duration="2642000" />
+      <workItem from="1514721130096" duration="409000" />
+      <workItem from="1514726693851" duration="4667000" />
+      <workItem from="1514737906725" duration="95000" />
+      <workItem from="1514738069321" duration="274000" />
+      <workItem from="1514807083920" duration="3000" />
+      <workItem from="1514808232847" duration="743000" />
+      <workItem from="1514809130092" duration="12000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="131751000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="377" y="19" width="1366" height="725" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15711094" sideWeight="0.58064514" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32888147" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.49283153" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32888147" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23076923" sideWeight="0.41935483" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32888147" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32888147" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29908675" sideWeight="0.58064514" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.49283153" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23076923" sideWeight="0.41935483" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CSS/day02/demo08.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="48" column="25" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/day02/demo10.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="12" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/day02/demo12.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/day02/demo11.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="9" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="13" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/day02/demo13.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="12" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/day02/demo14.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/day02/demo15.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/day02/demo16.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/day02/demo17.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/file.txt" />
+    <entry file="file://$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/app01.js" />
+    <entry file="file://$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/app02.js" />
+    <entry file="file://$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/package.json" />
+    <entry file="file://$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/index.jade" />
+    <entry file="file://$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/tasks/layout.jade" />
+    <entry file="file://$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/tasks/edit.jade" />
+    <entry file="file://$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/routes/index.js" />
+    <entry file="file://$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/routes/users.js" />
+    <entry file="file://$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/tasks/index.jade" />
+    <entry file="file://$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/layout.jade" />
+    <entry file="file://$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/tasks/new.jade" />
+    <entry file="file://$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/app.js" />
+    <entry file="file://$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter09/README.md" />
+    <entry file="file://$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/README.md" />
+    <entry file="file://$PROJECT_DIR$/Node.js/Node.jsClassic/README.md" />
+    <entry file="file://$PROJECT_DIR$/Java/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Java/SelfStudy/JavaClassic/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript/SelfStudy/JavaScriptGuide/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="16" lean-forward="true" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node.js/README.md" />
+    <entry file="file://$PROJECT_DIR$/React.js/FraserXu/README.md" />
+    <entry file="file://$PROJECT_DIR$/React.js/FraserXu/demo1.html" />
+    <entry file="file://$PROJECT_DIR$/React.js/docs/Installation/README.md" />
+    <entry file="file://$PROJECT_DIR$/React.js/docs/demo1.html" />
+    <entry file="file://$PROJECT_DIR$/React.js/README.md" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/React.js/docs/README.md" />
+    <entry file="file://$PROJECT_DIR$/webpack/README.md" />
+    <entry file="file://$PROJECT_DIR$/CSS/day01/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/day02/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="422">
+            <caret line="123" column="0" lean-forward="true" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/day01/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-486">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/day02/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="422">
+            <caret line="132" column="0" lean-forward="true" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/day03/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="422">
+            <caret line="160" column="0" lean-forward="true" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/templates/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="252">
+            <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/day04/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="350">
+            <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MERN/Node.jsClassic/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MERN/React.jsDocs/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TypingSpeed/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="36">
+            <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="8" lean-forward="true" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
