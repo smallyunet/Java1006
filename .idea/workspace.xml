@@ -2,79 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1229e97-3b1c-49c4-98b1-9e04a899b406" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter01/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter01/server.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter02/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter02/foo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter02/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter03/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter03/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter03/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter04/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter04/app01.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter04/app02.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter04/app03.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter04/app04.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter04/file01.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter04/file02.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter04/index01.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter04/index02.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter05/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter05/server01.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter05/server02.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter05/server03.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter05/server04.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter05/server05.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/express-example/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/express-example/bin/www" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/express-example/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/express-example/public/stylesheets/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/express-example/routes/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/express-example/routes/users.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/express-example/views/error.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/express-example/views/includes/footer.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/express-example/views/index.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter06/express-example/views/layout.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/bin/www" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/public/stylesheets/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/routes/about.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/routes/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/routes/users.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/views/error.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/views/index.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/views/layout.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter07/express_routing/views/user.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/app01.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/app02.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/bin/www" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/public/stylesheets/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/routes/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/routes/users.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/error.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/index.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/layout.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/tasks/edit.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/tasks/index.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/connect_to_mongo/views/tasks/new.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/Chapter08/file.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/Node.jsClassic/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Node.js/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/React.js/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/React.js/docs/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webpack/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webpack/build-a-hn-front-page/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webpack/build-a-hn-front-page/app/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webpack/build-a-hn-front-page/build/bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webpack/build-a-hn-front-page/build/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webpack/build-a-hn-front-page/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webpack/build-a-hn-front-page/webpack.config.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -92,17 +21,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="0">
-                <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+                <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
                 <folding />
               </first_editor>
               <second_editor>
                 <js_state />
               </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -134,7 +73,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CSS/day02/demo3.html" />
         <option value="$PROJECT_DIR$/CSS/day02/demo1.html" />
         <option value="$PROJECT_DIR$/CSS/day02/demo2.html" />
         <option value="$PROJECT_DIR$/CSS/day02/demo4.html" />
@@ -185,6 +123,7 @@
         <option value="$PROJECT_DIR$/HTML/day04/README.md" />
         <option value="$PROJECT_DIR$/TypingSpeed/README.md" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -337,12 +276,12 @@
       <workItem from="1514738069321" duration="274000" />
       <workItem from="1514807083920" duration="3000" />
       <workItem from="1514808232847" duration="743000" />
-      <workItem from="1514809130092" duration="12000" />
+      <workItem from="1514809130092" duration="334000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131751000" />
+    <option name="totallyTimeSpent" value="132073000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="377" y="19" width="1366" height="725" extended-state="6" />
@@ -540,13 +479,6 @@
     <entry file="file://$PROJECT_DIR$/React.js/docs/Installation/README.md" />
     <entry file="file://$PROJECT_DIR$/React.js/docs/demo1.html" />
     <entry file="file://$PROJECT_DIR$/React.js/README.md" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/React.js/docs/README.md" />
     <entry file="file://$PROJECT_DIR$/webpack/README.md" />
     <entry file="file://$PROJECT_DIR$/CSS/day01/README.md">
@@ -686,12 +618,20 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
-            <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+            <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
             <folding />
           </first_editor>
           <second_editor>
             <js_state />
           </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
