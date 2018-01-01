@@ -158,35 +158,3 @@ HTTP协议的请求方式当然不止GET/POST两种，还有PUT、DELETE等多�
 ## 其他
 
 归档： [培训第三天](http://blog.smallyu.net/2017/12/17/%E5%9F%B9%E8%AE%AD%E7%AC%AC%E4%B8%89%E5%A4%A9/)
-
-## 打字测速
-
-### 2017.12.17
-
-![testing.png](./images/testing.png)
-
-### 2017.12.18
-
-![testing.png](./images/testing2.png)
-
-### 2017.12.19
-
-![testing.png](./images/testing3.png)
-
-### 2017.12.20
-
-![testing.png](./images/testing4.png)
-
-### 2017.12.22
-
-![testing.png](./images/testing5.png)
-
-![testing.png](./images/testing6.png)
-
-![testing.png](./images/testing7.png)
-
-![testing.png](./images/testing8.png)
-
-### 2017.12.23
-
-![testing.png](./images/testing9.png)

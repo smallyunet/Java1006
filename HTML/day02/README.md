@@ -130,24 +130,3 @@ usemap  	用于链接map映射，chrome不支持，火狐支持
 ## 其他
 
 归档： [培训第二天](http://blog.smallyu.net/2017/12/10/%E5%9F%B9%E8%AE%AD%E7%AC%AC%E4%BA%8C%E5%A4%A9/)
-
-
-## 补充 
-
-### 2017.12.14
-
-打字测速：
-
-![testing.png](./images/testing2.png)
-
-### 2017.12.15
-
-打字测速：
-
-![testing.png](./images/testing3.png)
-
-### 2017.12.16
-
-打字测速：
-
-![testing.png](./images/testing4.png)

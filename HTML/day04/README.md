@@ -124,38 +124,10 @@ Cache-control策略与Expires类似，但是指定项更多、更全面。
 
 参考阅读：[浏览器缓存机制](https://www.cnblogs.com/skynet/archive/2012/11/28/2792503.html)
 
-### px/dp/dpi的关系
+### 像素、dp和dpi的关系
 
 很难的问题，目前没能解决。
 
 ## 其他
 
 归档： [培训第四天](http://blog.smallyu.net/2017/12/24/培训第四天/)
-
-## 打字测速
-
-### 2017.12.24
-
-![testing.png](./images/testing2.png)
-
-### 2017.12.26
-
-![testing.png](./images/testing3.png)
-
-![testing.png](./images/testing4.png)
-
-### 2017.12.27
-
-![testing.png](./images/testing5.png)
-
-![testing.png](./images/testing6.png)
-
-![testing.png](./images/testing7.png)
-
-### 2017.12.28
-
-![testing.png](./images/testing8.png)
-
-### 2017.12.29
-
-![testing.png](./images/testing9.png)

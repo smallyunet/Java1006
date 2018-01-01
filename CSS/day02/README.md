@@ -102,7 +102,7 @@ overflow                    溢出内容处理
     scroll                  滚动条
 ```
 
-- inline 行内元素，不可以设置宽高，不能独占一行。span,b,i,
+- inline 行内元素，不可以设置宽高，不能独占一行。
 - inline-block 行内块级元素，可以设置宽高，不能独占一行。
 - block 块级元素，可以设置宽高，可以独占一行。
 
@@ -121,8 +121,3 @@ overflow                    溢出内容处理
 
 归档：[培训第五天](http://blog.smallyu.net/2017/12/30/培训第五天)
 
-## 打字测试
-
-### 2017.12.30
-
-![testing.png](./images/testing.png)

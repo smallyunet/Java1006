@@ -1,0 +1,10 @@
+
+/* npm安装模块使用package.json的方式 */
+
+{
+  "name": "example02",
+  "version": "0.0.1",
+  "dependencies": {
+    "underscore": "~1.2.1"
+  }
+}
