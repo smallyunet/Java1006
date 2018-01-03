@@ -1,5 +1,3 @@
-第二天的内容涉及到HTML常用元素的认识和使用，以及其他边沿常识。
-
 ## HTML入门
 
 使用webstorm按照规定目录结构新建文件，如果遇到模板失效的情况，可以在Settings中查找选择File and Code Templates并进行相应更改。
@@ -126,7 +124,3 @@ usemap  	用于链接map映射，chrome不支持，火狐支持
 - UTF-8、UTF-16、UTF-32   Unicode的子集，集合大小不同
 
 参考阅读： [字符集和字符编码（Charset & Encoding）](https://www.cnblogs.com/skynet/archive/2011/05/03/2035105.html)
-
-## 其他
-
-归档： [培训第二天](http://blog.smallyu.net/2017/12/10/%E5%9F%B9%E8%AE%AD%E7%AC%AC%E4%BA%8C%E5%A4%A9/)

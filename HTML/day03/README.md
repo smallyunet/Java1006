@@ -1,6 +1,4 @@
 
-第三天的内容依旧是HTML标签部分，涉及到列表、表格、框架、音视频和表单等。
-
 ## HTML入门
 
 ### 列表相关元素
@@ -154,7 +152,3 @@ HTTP协议的请求方式当然不止GET/POST两种，还有PUT、DELETE等多�
 ### SSL和SSH的区别？
 
 参考阅读：[SSL和SSH的区别](http://blog.csdn.net/simanstar/article/details/40592057)
-
-## 其他
-
-归档： [培训第三天](http://blog.smallyu.net/2017/12/17/%E5%9F%B9%E8%AE%AD%E7%AC%AC%E4%B8%89%E5%A4%A9/)

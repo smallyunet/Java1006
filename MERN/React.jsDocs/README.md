@@ -1,5 +1,5 @@
 
-## 中文文档
+## React文档
 
 https://doc.react-china.org/docs/hello-world.html
 
