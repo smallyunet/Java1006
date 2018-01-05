@@ -54,5 +54,6 @@ for(int i = 0; i < 100; i++) {
 - ConsDemo.java （构造方法示例）
 - StringAPIDemo.java （String对象常用方法）
 - RefDemo.java （对象的引用传递）
+- RefDemo05.java （对象的一对一关系）
 
-127页5.8.3
+129页5.8.4

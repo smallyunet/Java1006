@@ -32,4 +32,6 @@
 
 还有要注意`loader: 'babel-loader'`，必须用`-loader`后缀，原教程没有 ^_^
 
+## 案例效果
+
 ![preview](preview.png)
