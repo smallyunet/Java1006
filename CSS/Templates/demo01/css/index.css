@@ -1,3 +1,5 @@
+/* --------- 全局样式 -------*/
+
 * {
 	padding: 0;
 	margin: 0;
@@ -7,19 +9,121 @@ a {
 	text-decoration: none;
 }
 
-#header {
-	height: 120px;
+/* ---------- header -----------*/
+
+header {
+	height: 122px;
 	width: 100%;
-	margin-bottom: -5px;
 }
+
+/* -------- banner轮播图 --------- */
 
 #banner {
 	width: 100%;
 	height: 420px;
-	background: url(../images/banner1.jpg);
-	background-position: center;
-	background-size: 100% 100%;
+	overflow: hidden;
 }
+
+#banner-container {
+	width: 300%;
+	height: 100%;
+	-webkit-animation: slide1 6s linear infinite;
+}
+
+#banner img {
+	width: 33%;
+	height: 100%;
+}
+
+#banner input {
+	display: none;
+}
+
+@-webkit-keyframes slide1 {
+	0% {transform: translate(0,0);}
+    20% {transform: translate(0,0);}
+
+    35% {transform: translate(-33%,0);}
+    55% {transform: translate(-33%,0);}
+
+    70% {transform: translate(-66%,0);}
+    85% {transform: translate(-66%,0);}
+
+    100% {transform: translate(0,0);}
+}
+
+@-webkit-keyframes slide2 {
+    0% {transform: translate(-33%,0);}
+    20% {transform: translate(-33%,0);}
+
+    35% {transform: translate(-66%,0);}
+    55% {transform: translate(-66%,0);}
+
+    70% {transform: translate(0,0);}
+	85% {transform: translate(0,0);}
+
+    100% {transform: translate(0,0);}
+}
+
+@-webkit-keyframes slide3 {
+    0% {transform: translate(-66%,0);}
+    20% {transform: translate(-66%,0);}
+
+    35% {transform: translate(0,0);}
+	55% {transform: translate(0,0);}
+
+    70% {transform: translate(0,0);}
+	85% {transform: translate(-33%,0);}
+
+    100% {transform: translate(-33%,0);}
+}
+
+/* ------- 动画选择 -------*/
+#s1:checked ~ #banner-container {
+	-webkit-animation-name: slide1;
+}
+
+#s2:checked ~ #banner-container {
+	-webkit-animation-name: slide2;
+}
+
+#s3:checked ~ #banner-container {
+	-webkit-animation-name: slide3;
+}
+
+/*------- 切换时的缓冲 -------*/
+#s1:active ~ #banner-container {
+	-webkit-animation-name: none;
+	transform: translate(0,0);
+}
+
+#s2:active ~ #banner-container {
+	-webkit-animation-name: none;
+	transform: translate(-33%,0);
+}
+
+#s3:active ~ #banner-container {
+	-webkit-animation-name: none;
+	transform: translate(-66%,0);
+}
+
+#opts label {
+	display: inline-block;
+	width: 100px;
+	height: 6px;
+	background: #3b3d5e;
+	position: relative;
+    bottom: 50px;
+    left: calc(50% - 150px);
+    border-radius: 3px;
+}
+
+#opts label:hover {
+	cursor:pointer;
+	background: #fff;
+}
+
+/* ---------- 关于我们 ----------*/
 
 #about {
 	text-align: center;
@@ -140,6 +244,7 @@ a {
 	margin-top: 20px;
 }
 
+/*--------- banner2 --------*/
 #banner2 {
 	position: relative;
 	width: 100%;
@@ -151,6 +256,7 @@ a {
 	clear:both;
 }
 
+/*--------- 产品中心 ------------*/
 #product {
 	text-align: center;
 	padding-top: 20px;
@@ -230,6 +336,7 @@ a {
 	color: #fff;
 }
 
+/*-------------- 解决方案 -----------*/
 #business {
 	width: 100%;
 	height: 503px;
@@ -295,6 +402,7 @@ a {
 	text-decoration: underline;
 }
 
+/* --------- 新闻中心 -----------*/
 #news {
 	width: 100%;
 	height: 460px;
@@ -316,12 +424,51 @@ a {
 	width: 600px;
 	height: 340px;
 	margin-top: 30px;
-	background: url(../images/pic1.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 100% 100%;
+	/*background: url(../images/pic1.jpg);*/
+	/*background-repeat: no-repeat;*/
+	/*background-position: center;*/
+	/*background-size: 100% 100%;*/
+	position: relative;
 }
 
+#news-left img {
+	width: 600px;
+	height: 340px;
+}
+
+.news-pic {
+	display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    background: #1a2a41;
+    position: absolute;
+    bottom: -45px;
+}
+
+#p1 { left: 220px; }
+#p2 { left: 260px; }
+#p3 { left: 300px; }
+#p4 { left: 340px; }
+#p5 { left: 380px; }
+#p6 { left: 420px; }
+
+#p1:hover { background: #ff9326; }
+#p2:hover { background: #ff9326; }
+#p3:hover { background: #ff9326; }
+#p4:hover { background: #ff9326; }
+#p5:hover { background: #ff9326; }
+#p6:hover { background: #ff9326; }
+
+/*----- 这里有错误 --------*/
+#p1:hover #news-left { background: url(../images/pic1.jpg); }
+#p2:hover #news-left { background: url(../images/pic2.jpg); }
+#p3:hover #news-left { background: url(../images/pic3.jpg); }
+#p4:hover #news-left { background: url(../images/pic4.jpg); }
+#p5:hover #news-left { background: url(../images/pic5.jpg); }
+#p6:hover #news-left { background: url(../images/pic6.jpg); }
+
+/*-------- 新闻右侧 ----------*/
 #news-right {
 	float:left;
 	height: 200px;
@@ -353,9 +500,9 @@ a {
 	color: #7a8194;
 }
 
-#footer {
+/*-------- 底部 -------*/
+footer {
 	height: 276px;
 	width: 100%;
 	margin-top: 50px;
-	margin-bottom: -15px;
 }

@@ -6,3 +6,8 @@
 ### 2018.01.21
 
 ![TypingSpeed](images/21.png)
+
+### 2018.01.22
+
+![TypingSpeed](images/22.png)
+
