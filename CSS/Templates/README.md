@@ -15,5 +15,5 @@
 
 - demo1 （仿[中质信联](http://www.hi8000.com/)）
 
-- demo2 （仿[宠物网站](http://www.wenshentang.net/)）
+- demo2 （仿[婚纱网站](http://www.zgyunqi.com/)）
 

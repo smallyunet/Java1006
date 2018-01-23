@@ -1,0 +1,47 @@
+.header ul li:first-child {
+	margin-left: 175px;
+}
+
+.header ul li:nth-child(5) {
+	color: #fff;
+	background: #f5005e;
+}
+
+.header ul li:nth-child(5) a {
+	color: #fff;
+}
+
+/*----------- banner -------*/
+
+.banner {
+	width: 100%;
+	height: 506px;
+	background: url(../imgs/p16.jpg) no-repeat;
+	margin-bottom: 80px;
+}
+
+/*--------content ---------  */
+
+.wrap {
+	text-align: center;
+}
+
+.wrap>img {
+	margin: 30px 0;
+}
+
+.box {
+	display: inline-block;
+	margin: 20px 130px;
+}
+
+.box div {
+	padding: 15px;
+	color: #333;
+	font-size:14px;
+}
+
+.box div span {
+	color: #666;
+	line-height: 40PX;	
+}

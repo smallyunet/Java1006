@@ -1,0 +1,75 @@
+/*------------- 通用 --------*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	width: 1350px;
+}
+
+
+/*------------顶部----------*/
+
+.header {
+	width: 100%;
+	height: 120px;
+}
+
+.header img {
+	float: left;
+	margin: 27px 80px;
+}
+
+.header ul {
+	list-style: none;
+}
+
+.header ul li {
+	float: left; 
+}
+
+
+
+.header ul li a {
+	display: inline-block;
+	width: 140px;
+	height: 120px;
+	line-height: 120px;
+	text-align: center;
+	font-size: 16px;
+	color: #313131;
+}
+
+.header ul li a:hover {
+	color: #fff;
+	background: #f5005e;
+}
+
+
+/*------ 通用 ----------*/
+.clear {
+	overflow:hidden;
+}
+
+/*-------- 标题--------*/
+
+.head {
+	text-align: center;
+	padding-bottom: 20px;
+	border-bottom: solid 1px #f0f0f0;
+}
+
+.head .title{
+	color: #f5005e;
+	font-size: 28px;
+}
+
+.head .sub-title {
+	color: #ed3da1;
+	font-size: 14px;
+}

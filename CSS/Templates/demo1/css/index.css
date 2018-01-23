@@ -1,361 +1,127 @@
-* {
-	padding: 0;
-	margin: 0;
+/* -------- banner轮播图 --------- */
+#banner { width: 100%; height: 420px; overflow: hidden; }
+#banner-container { width: 300%; height: 100%; -webkit-animation: slide1 6s linear infinite; }
+#banner img { width: 33%; height: 100%; }
+#banner input { display: none; }
+@-webkit-keyframes slide1 {
+	0% { transform: translate(0, 0); }
+	20% { transform: translate(0, 0); }
+	35% { transform: translate(-33%, 0); }
+	55% { transform: translate(-33%, 0); }
+	70% { transform: translate(-66%, 0); }
+	85% { transform: translate(-66%, 0); }
+	100% { transform: translate(0, 0); }
+}
+@-webkit-keyframes slide2 {
+	0% { transform: translate(-33%, 0); }
+	20% { transform: translate(-33%, 0); }
+	35% { transform: translate(-66%, 0); }
+	55% { transform: translate(-66%, 0); }
+	70% { transform: translate(0, 0); }
+	85% { transform: translate(0, 0); }
+	100% { transform: translate(0, 0); }
+}
+@-webkit-keyframes slide3 {
+	0% { transform: translate(-66%, 0); }
+	20% { transform: translate(-66%, 0); }
+	35% { transform: translate(0, 0); }
+	55% { transform: translate(0, 0); }
+	70% { transform: translate(0, 0); }
+	85% { transform: translate(-33%, 0); }
+	100% { transform: translate(-33%, 0); }
 }
 
-a {
-	text-decoration: none;
-}
+/* ------- 动画选择 -------*/
+#s1:checked ~ #banner-container { -webkit-animation-name: slide1; }
+#s2:checked ~ #banner-container { -webkit-animation-name: slide2; }
+#s3:checked ~ #banner-container { -webkit-animation-name: slide3; }
 
-#header {
-	height: 120px;
-	width: 100%;
-	margin-bottom: -5px;
-}
+/*------- 切换时的缓冲 -------*/
+#s1:active ~ #banner-container { -webkit-animation-name: none; transform: translate(0, 0); }
+#s2:active ~ #banner-container { -webkit-animation-name: none; transform: translate(-33%, 0); }
+#s3:active ~ #banner-container { -webkit-animation-name: none; transform: translate(-66%, 0); }
+#opts label { display: inline-block; width: 100px; height: 6px; background: #3b3d5e; position: relative; bottom: 50px; left: calc(50% - 150px); border-radius: 3px; }
+#opts label:hover { cursor: pointer; background: #fff; }
 
-#banner {
-	width: 100%;
-	height: 420px;
-	background: url(../images/banner1.jpg);
-	background-position: center;
-	background-size: 100% 100%;
-}
+/* ---------- 关于我们 ----------*/
+#about { text-align: center; }
+#about-wrap { width: 934px; margin: 0 auto; }
+#about-title { color: #000; font-size: 30px; margin-top: 50px; }
+#about-sub-title { color: #a8a8b7; font-size: 14px; margin-top: 10px; }
+#about-content { margin-top: 40px; text-align: justify; text-indent: 2em; line-height: 36px; height: 144px; color: #666; }
+#about-map { margin-top: 40px; }
+#about-map dl { float: left; margin-left: 158px; text-align: center; font-size: 18px; color: #8e9196; }
+#about-map dt { height: 100px; width: 100px; position: relative; }
+#about-map #yuan01 { background: url(../images/yuan01.png); background-repeat: no-repeat; background-position: center; }
+#about-map #yuan02 { background: url(../images/yuan02.png); background-repeat: no-repeat; background-position: center; }
+#about-map #yuan03 { background: url(../images/yuan03.png); background-repeat: no-repeat; background-position: center; }
+#about-map .left { background: url(../images/hui_z.png); height: 100px; width: 50px; background-position: left top; position: absolute; left: 0; top: 0; transition: height 0.6s linear; -webkit-transition: height 0.6s linear; -o-transition: height 0.6s linear; -ms-transition: height 0.6s linear; -moz-transition: height 0.6s linear; }
+#about-map .right { background: url(../images/hui_y.png); height: 100px; width: 50px; background-position: right bottom; position: absolute; right: 0; bottom: 0; transition: height 0.6s linear; transition: height 0.6s linear; -webkit-transition: height 0.6s linear; -o-transition: height 0.6s linear; -ms-transition: height 0.6s linear; -moz-transition: height 0.6s linear; }
+#about-map #yuan02 .left { background: url(../images/hei_z.png); }
+#about-map #yuan02 .right { background: url(../images/hei_y.png); background-position: right bottom; }
+#about-map dl:hover .left { height: 0; }
+#about-map dl:hover .right { height: 0; }
+#about-map dd { margin-top: 20px; }
 
-#about {
-	text-align: center;
-}
+/*--------- banner2 --------*/
+#banner2 { position: relative; width: 100%; height: 235px; background: url(../images/banner2.jpg); background-position: center; top: 30px; margin-bottom: 50px; clear: both; }
 
-#about-wrap {
-	width: 934px;
-	margin: 0 auto;
-}
+/*--------- 产品中心 ------------*/
+#product { text-align: center; padding-top: 20px; }
+#product-wrap { width: 1086px; height: 100%; margin: 0 auto; text-align: center; }
+#product-title { font-size: 30px; }
+#product-sub-title { font-size: 22px; }
+#product-content { margin-top: 30px; }
+#product-content dl { float: left; margin-left: 25px; width: 345px; transition: all 0.5s linear; -webkit-transition: all 0.5s linear; -o-transition: all 0.5s linear; -moz-transition: all 0.5s linear; }
+#product-content dl:first-child { margin-left: 0; }
+#product-content dl:hover { transform: scale(1.02); -webkit-box-shadow: 0 0 20px 2px #666; -moz-box-shadow: 0 0 20px 2px #666; box-shadow: 0 0 20px 2px #666; }
+#product-content dd { text-align: justify; overflow: hidden; background: #f4f4f4; padding: 0 15px; margin-top: -5px; height: 151px; }
+#product-content dd span { display: block; text-align: center; font-size: 20px; color: #313140; padding-top: 15px; padding-bottom: 15px; }
+#product-content dd b { color: #858594; font-size: 14px; line-height: 25px; font-weight: normal; overflow: hidden; }
+#product-content dl:hover dd { background-color: #ff9326; }
+#product-content dl:hover b { color: #fff; }
 
-#about-title {
-	color: #000;
-	font-size: 30px;
-	margin-top: 50px;
-}
+/*-------------- 解决方案 -----------*/
+#business { width: 100%; height: 503px; position: relative; background: #dfe4e7; top: 50px; clear: both; }
+#business-wrap { width: 1200px; padding-top: 30px; margin: 0 auto; }
+#business-title { text-align: center; font-size: 30px; }
+#business-sub-title { text-align: center; font-size: 22px; }
+#business-wrap dl { float: left; width: 50%; margin-top: 65px; position: relative; }
+#business-wrap dt { margin-right: 30px; width: 100px; height: 110px; }
+#business-wrap dd { width: 364px; height: 110px; line-height: 20px; overflow: hidden; position: absolute; top: 0; left: 130px; }
+#business-wrap .bs-wp-tit { line-height: 28px; font-size: 18px; color: #000; }
+#business-wrap .bs-wp-sub-tit { line-height: 24px; padding-top: 8px; color: #797f92; font-size: 14px; }
+#business-wrap .bs-wp-sub-tit:hover { text-decoration: underline; }
 
-#about-sub-title {
-	color: #a8a8b7;
-	font-size: 14px;
-	margin-top: 10px;
-}
+/* --------- 新闻中心 -----------*/
+#news { width: 100%; height: 460px; padding-top: 80px; }
+#news-wrap { width: 1200px; margin: 0 auto; }
+#news-title { text-align: center; font-size: 30px; padding-bottom: 10px; }
+#news-left { float: left; width: 600px; height: 340px; margin-top: 30px; background: url(../images/pic3.jpg); background-repeat: no-repeat; background-position: center; background-size: 100% 100%; position: relative; }
+#news-left img { width: 600px; height: 340px; }
+.news-pic { display: inline-block; width: 14px; height: 14px; border-radius: 7px; background: #1a2a41; position: relative; bottom: -400px; }
+#p1 { left: -420px; }
+#p2 { left: -390px; }
+#p3 { left: -360px; }
+#p4 { left: -330px; }
+#p5 { left: -300px; }
+#p6 { left: -270px; }
+#p1:hover { background: #ff9326; }
+#p2:hover { background: #ff9326; }
+#p3:hover { background: #ff9326; }
+#p4:hover { background: #ff9326; }
+#p5:hover { background: #ff9326; }
+#p6:hover { background: #ff9326; }
+#p1:hover ~ #news-left { background: url(../images/pic1.jpg) no-repeat center; background-repeat: no-repeat; background-position: center; background-size: 100% 100%; }
+#p2:hover ~ #news-left { background: url(../images/pic2.jpg) no-repeat center; background-repeat: no-repeat; background-position: center; background-size: 100% 100%; }
+#p3:hover ~ #news-left { background: url(../images/pic3.jpg) no-repeat center; background-repeat: no-repeat; background-position: center; background-size: 100% 100%; }
+#p4:hover ~ #news-left { background: url(../images/pic4.jpg) no-repeat center; background-repeat: no-repeat; background-position: center; background-size: 100% 100%; }
+#p5:hover ~ #news-left { background: url(../images/pic5.png) no-repeat center; background-repeat: no-repeat; background-position: center; background-size: 100% 100%; }
+#p6:hover ~ #news-left { background: url(../images/pic6.png) no-repeat center; background-repeat: no-repeat; background-position: center; background-size: 100% 100%; }
 
-#about-content {
-	margin-top: 40px;
-	text-align: justify;
-	text-indent: 2em;
-	line-height: 36px;
-	height: 144px;
-	color: #666;
-}
-
-#about-map {
-	margin-top: 40px;
-}
-
-#about-map dl {
-	float: left;
-	margin-left: 158px;
-	text-align: center;
-	font-size: 18px;
-	color: #8e9196;
-}
-
-#about-map dt {
-	height: 100px;
-	width: 100px;
-	position: relative;
-}
-
-#about-map #yuan01 {
-	background: url(../images/yuan01.png);
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
-#about-map #yuan02 {
-	background: url(../images/yuan02.png);
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
-#about-map #yuan03 {
-	background: url(../images/yuan03.png);
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
-#about-map .left {
-	background: url(../images/hui_z.png);
-	height:100px;
-	width: 50px;
-	background-position: left top;
-	position: absolute;
-	left: 0;
-	top: 0;
-	transition: height 0.6s linear;
-    -webkit-transition: height 0.6s linear;
-    -o-transition: height 0.6s linear;
-    -ms-transition: height 0.6s linear;
-    -moz-transition: height 0.6s linear;
-}
-
-
-#about-map .right {
-	background: url(../images/hui_y.png);
-	height:100px;
-	width: 50px;
-	background-position: right bottom;
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	transition: height 0.6s linear;
-	transition: height 0.6s linear;
-    -webkit-transition: height 0.6s linear;
-    -o-transition: height 0.6s linear;
-    -ms-transition: height 0.6s linear;
-    -moz-transition: height 0.6s linear;
-}
-
-#about-map #yuan02 .left {	
-	background: url(../images/hei_z.png);
-}
-
-#about-map #yuan02 .right {
-	background: url(../images/hei_y.png);
-	background-position: right bottom;
-}
-
-#about-map dl:hover .left {
-	height: 0;
-}
-
-#about-map dl:hover .right {
-	height: 0;
-}
-
-#about-map dd {
-	margin-top: 20px;
-}
-
-#banner2 {
-	position: relative;
-	width: 100%;
-	height: 235px;
-	background: url(../images/banner2.jpg);
-	background-position: center;
-	top: 30px;
-	margin-bottom: 50px;
-	clear:both;
-}
-
-#product {
-	text-align: center;
-	padding-top: 20px;
-}
-
-#product-wrap {
-	width: 1086px;
-	height: 100%;
-	margin: 0 auto;
-	text-align: center;
-}
-
-#product-title {
-	font-size: 30px;
-}
-
-#product-sub-title {
-	font-size: 22px;
-}
-
-#product-content {
-	margin-top: 30px;
-}
-
-#product-content dl {
-	float: left;
-	margin-left: 25px;
-	width: 345px;
-	transition: all 0.5s linear;
-    -webkit-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-}
-
-#product-content dl:first-child {
-	margin-left: 0;
-}
-
-#product-content dl:hover {
-	transform: scale(1.02);
-    -webkit-box-shadow:0 0 20px 2px #666;
-    -moz-box-shadow:0 0 20px 2px #666;
-    box-shadow:0 0 20px 2px #666;
-}
-
-#product-content dd {
-	text-align: justify;
-	overflow: hidden;
-	background: #f4f4f4;
-	padding: 0 15px;
-	margin-top: -5px;
-	height: 151px;
-}
-
-#product-content dd span {
-	display: block;
-	text-align: center;
-	font-size: 20px;
-	color: #313140;
-	padding-top: 15px;
-	padding-bottom: 15px;
-}
-
-#product-content dd b {
-	color: #858594;
-	font-size: 14px;
-	line-height:  25px;
-	font-weight: normal;
-	overflow: hidden;
-}
-
-#product-content dl:hover dd{
-	background-color: #ff9326;
-}
-
-#product-content dl:hover b{
-	color: #fff;
-}
-
-#business {
-	width: 100%;
-	height: 503px;
-	position: relative;
-	background: #dfe4e7;
-	top: 50px;
-	clear: both;
-}
-
-#business-wrap {
-	width: 1200px;
-	padding-top: 30px;
-	margin: 0 auto;
-}
-
-#business-title {
-	text-align: center;
-	font-size: 30px;
-}
-
-#business-sub-title {
-	text-align: center;
-	font-size: 22px;
-}
-
-#business-wrap dl {
-	float: left;
-	width: 50%;
-	margin-top: 65px;
-	position: relative;
-}
-
-#business-wrap dt {
-	margin-right: 30px;
-	width: 100px;
-	height: 110px;
-}
-
-#business-wrap dd {
-	width: 364px;
-	height: 110px;
-	line-height: 20px;
-	overflow: hidden;
-	position: absolute;
-	top: 0;
-	left: 130px;
-}
-
-#business-wrap .bs-wp-tit {
-	line-height: 28px;
-	font-size: 18px;
-	color: #000;
-}
-
-#business-wrap .bs-wp-sub-tit {
-	line-height: 24px;
-	padding-top: 8px;
-	color: #797f92;
-	font-size: 14px;
-}
-
-#business-wrap .bs-wp-sub-tit:hover {
-	text-decoration: underline;
-}
-
-#news {
-	width: 100%;
-	height: 460px;
-	padding-top: 80px;
-}
-
-#news-wrap {
-	width: 1200px;
-	margin: 0 auto;
-}
-
-#news-title {
-	text-align: center;
-	font-size: 30px;
-}
-
-#news-left {
-	float:left;
-	width: 600px;
-	height: 340px;
-	margin-top: 30px;
-	background: url(../images/pic1.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 100% 100%;
-}
-
-#news-right {
-	float:left;
-	height: 200px;
-	margin-top: 30px;
-	margin-left: 75px;
-}
-
-#news-right a {
-	transition: color 0.5s linear;
-}
-
-#news-right a:hover {
-	color: #ff9326;
-}
-
-#news-right li {
-	background: url(../images/jia.png);
-	background-position: left center;
-	background-repeat:no-repeat;
-	line-height: 40px;
-	width: 450px;
-	padding-left: 40px;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-}
-
-#news-right li a {
-	color: #7a8194;
-}
-
-#footer {
-	height: 276px;
-	width: 100%;
-	margin-top: 50px;
-	margin-bottom: -15px;
-}
+/*-------- 新闻右侧 ----------*/
+#news-right { float: left; height: 200px; margin-top: 30px; margin-left: 75px; position: relative; bottom: 32px; }
+#news-right a { transition: color 0.5s linear; }
+#news-right a:hover { color: #ff9326; }
+#news-right li { background: url(../images/jia.png); background-position: left center; background-repeat: no-repeat; line-height: 40px; width: 450px; padding-left: 40px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+#news-right li a { color: #7a8194; }
