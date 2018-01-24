@@ -7,8 +7,8 @@
     - day01 （课程第一天课堂笔记）
     - day02 （课程第二天课堂笔记）
     - Templates （寒假仿站作业,两套模板）
-        - demo1 （仿中质信联,在线预览:(http://ychs-web.smallyu.net/demo1)）
-        - demo2 （仿婚纱网站,在线预览:(http://ychs-web.smallyu.net/demo2)）
+        - demo1 （仿中质信联,在线预览： http://ychs-web.smallyu.net/demo1 ）
+        - demo2 （仿婚纱网站,在线预览： http://ychs-web.smallyu.net/demo2 ）
 
 - HTML
     - day01 （课程第一天课堂笔记）
