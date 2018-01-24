@@ -13,7 +13,7 @@
 
 ### 代码目录
 
-- demo1 （仿中质信联,在线预览:[http://ychs-web.smallyu.net/demo1]）
+- demo1 （仿中质信联,在线预览:(http://ychs-web.smallyu.net/demo1)）
 
-- demo2 （仿婚纱网站,在线预览:[http://ychs-web.smallyu.net/demo2]）
+- demo2 （仿婚纱网站,在线预览:(http://ychs-web.smallyu.net/demo2)）
 
