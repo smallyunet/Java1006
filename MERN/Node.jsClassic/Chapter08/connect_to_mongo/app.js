@@ -5,76 +5,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var session = require('express-session');
+
 var index = require('./routes/index');
 var users = require('./routes/users');
 
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/todo_development', {useMongoClient:true}, function(err) {
-    if (!err) {
-        console.log('connected toMongoDB');
-    } else {
-        throw err;
-    }
-});
-var Schema = mongoose.Schema;
-var ObjectId = Schema.ObjectId;
-
-var Task = new Schema({
-    task: String
-});
-
-var Task = mongoose.model('Task', Task);
-
 var app = express();
-
-app.get('/tasks', function(req, res) {
-    Task.find({}, function (err, docs) {
-        res.render('tasks/index', {
-            title: 'Todos index view',
-            docs: docs
-        });
-    });
-});
-
-app.get('/tasks/new', function(req, res) {
-    res.render('tasks/new.jade', {
-        title: 'New Task'
-    });
-});
-
-app.post('/tasks', function(req, res) {
-    res.json(req.header);
-    // var task = new Task(req.body.task);
-    // task.save(function (err) {
-    //     if (!err) {
-    //         res.redirect('/tasks');
-    //     } else {
-    //         res.redirect('/tasks/new');
-    //     }
-    // });
-});
-
-app.get('/tasks/:id/edit', function(req, res) {
-    Task.findById(req.params.id, function(err ,doc){
-        res.render('tasks/edit', {
-            title: 'Edit Task View',
-            task: doc
-        });
-    });
-});
-app.put('/tasks/:id', function(req, res) {
-    Task.findById(req.params.id, function(err ,doc){
-        doc.task = req.body.task.task;
-        doc.save(function(err) {
-            if (!err) {
-                res.redict('/tasks');
-            } else {
-                // error
-            }
-        });
-    });
-});
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -88,20 +24,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({secret: "abcdefg"}));
+
 app.use('/', index);
 app.use('/users', users);
-
-app.post('/tasks', function(req, res) {
-    var task = new Task(req.body.task);
-    task.save(function (err) {
-        if (!err) {
-            console.log('a');
-            res.redirect('/tasks');
-        } else {
-            res.redirect('/tasks/new');
-        }
-    });
-});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
