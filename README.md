@@ -1,5 +1,5 @@
 
-> 谁有天大力气可以拎这自己飞呀
+> 博观而约取，厚积而薄发
 
 ### 目录简介
 
@@ -21,7 +21,12 @@
         - JavaScriptGuide （《JavaScript权威指南》阅读笔记）
 
 - MERN
+
     - Node.jsClassic （《Node.js入门经典》阅读笔记）
+        - Chapter08 （Tasks小案例，在线预览： http://ychs-web.smallyu.net:3030/tasks ）
+
+    - React.jsDocs （React中文文档阅读笔记）
+
     - build-a-hn-front-page （使用 React + Webpack 构建[Hacker News](https://news.ycombinator.com/)的前端页面）
 
 - TypingSpeed （金山打字测速）

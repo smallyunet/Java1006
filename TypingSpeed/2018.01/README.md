@@ -1,4 +1,8 @@
 
+### 2018.01.28
+
+![TypingSpeed](images/28.png)
+
 ### 2018.01.27
 
 ![TypingSpeed](images/27.png)
