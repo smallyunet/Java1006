@@ -1,6 +1,8 @@
 
 > React中文文档阅读笔记
 
+## 基础使用
+
 ### 安装
 
 这里选择React构建器来生成开发环境，使用命令：
@@ -198,3 +200,161 @@ ReactDOM.render(
 注意状态更新是**异步**的。
 
 注意组件之间是相互**独立**的。
+
+### 事件处理
+
+下面代码使用了事件并向事件传递参数：
+
+```
+// 声明自定义组件
+class Toggle extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { isToggle: true,
+                        name: 'Hello World!'
+                        };
+    }
+
+    // 单击事件触发的函数，e要写在参数的后面
+    handleClick(name, e) {
+        this.setState(prevState => ({
+            isToggleOn: !prevState.isToggleOn
+        }));
+        e.preventDefault();
+        alert(name);
+    }
+
+    render() {
+        return (
+            // 调用事件函数和传递参数都要使用.bind绑定
+            <button onClick={this.handleClick.bind(this, this.state.name)}>
+                {this.state.isToggleOn ? 'ON' : 'OFF'}
+            </button>
+        );
+    }
+
+}
+
+ReactDOM.render(
+    <Toggle />,
+    document.getElementById('root')
+);
+```
+
+React支持多种语法形式来调用事件和传递参数。
+
+注意事件e要排在传递参数的**后面**。
+
+### 条件渲染
+
+使用if语句：
+
+```
+function UserGreeting(props) {
+    return <h1>Welcome back!</h1>;
+}
+
+function GuestGreeting(props) {
+    return <h1>Please sign up</h1>;
+}
+
+function Greeting(props) {
+    const isLoggedIn = props.isLoggedIn;
+    if (isLoggedIn) {
+        return <UserGreeting />;
+    }
+    return <GuestGreeting />;
+}
+
+ReactDOM.render(
+    <Greeting isLoggedIn={false} />,
+    document.getElementById('root')
+);
+```
+
+如果要阻止组件渲染，可以让render返回null。
+
+### 列表 & Keys
+
+使用map()打印列表：
+
+```
+function ListItem(props) {
+    // 这里不需要指定key
+    return <li>{props.value}</li>;
+}
+
+function NumberList(props) {
+    const numbers = props.numbers;
+    // 在这里数组的上下文指定key值
+    const listItems = numbers.map((number) =>
+        <ListItem key={number.toString()} value={number} />
+    );
+    return (
+        <ul>
+            {listItems}
+        </ul>
+    );
+}
+
+const numbers = [1, 2, 3, 4, 5];
+ReactDOM.render(
+    <NumberList numbers={numbers} />,
+    document.getElementById('root')
+);
+```
+
+打印列表通常要为组件指定key值。
+
+### 表单
+
+表单处理用这样的方法：
+
+```
+class NameForm extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {value: ''};
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({value: event.target.value});
+    }
+
+    handleSubmit(event) {
+        alert('A name was submitted: ' + this.state.value);
+    }
+
+    render() {
+        return (
+            // 控制函数
+            <form onSubmit={this.handleSubmit}>
+                <label>
+                    Name:
+                    // 获取表单值
+                    <input type="text" value={this.state.value} onChange={this.handleChange} />
+                </label>
+                <input type="submit" value="Submit" />
+            </form>
+        );
+    }
+}
+
+ReactDOM.render(
+    <NameForm />,
+    document.getElementById('root')
+);
+```
+
+与input类似的还有textarea和select。
+
+### 状态提升
+
+如果两个子组件需要共用某些数据，需要把这些数据提升到父组件的state上。
+
+### 组合 vs 继承
+
+React推荐大量使用组合而不是继承，可用预定义属性{props.children}或者其他自定义属性来实现各种组件的组合。

@@ -12,14 +12,6 @@
 - HTML
     - dayN （课程第N天课堂笔记）
 
-- Java
-    - SelfStudy （self-study）
-        - JavaClassic （《Java开发实战经典阅读笔记》）
-
-- JavaScript
-    - SelfStudy （self-study）
-        - JavaScriptGuide （《JavaScript权威指南》阅读笔记）
-
 - MERN
 
     - Node.jsClassic （《Node.js入门经典》阅读笔记）
