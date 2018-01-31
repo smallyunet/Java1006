@@ -7,7 +7,7 @@
 
 这里选择React构建器来生成开发环境，使用命令：
 
-```
+``` javascript
 npm install -g creat-react-app  // 安装npmbao
 creat-react-app my-app          // 生成应用
 
@@ -21,7 +21,7 @@ npm start                       // 启动应用
 
 进入应用目录，修改src文件夹下的index.js文件，将原有的ReactDOM.render及其后的内容注释掉，改为：
 
-```
+``` javascript
 ReactDOM.render(
     <h1>Hello, world!</h1>,
     document.getElementById('root')
@@ -36,7 +36,7 @@ JSX相当于语法糖，可以在HTML标签中书写JavaScript代码。
 
 修改index.js的内容，除保留import的所有内容外，改为：
 
-```
+``` javascript
 // 声明格式化姓名的函数
 function formatName(user) {
     return user.firstName + ' ' + user.lastName;
@@ -68,7 +68,7 @@ ReactDOM.render(
 
 一个计时器的例子：
 
-```
+``` javascript
 // 定义执行UI渲染的函数
 function tick() {
   // 定义元素常量
@@ -95,7 +95,7 @@ setInterval(tick, 1000);
 
 这段代码定义了自定义组件Welcome：
 
-```
+``` javascript
 // 定义组件
 function Welcome(props) {
     return <h1>Hello, {props.name}</h1>;
@@ -115,7 +115,7 @@ React会将JSX的属性以对单个对象的形式传递给组件，上面的代
 
 组件也可是组合使用：
 
-```
+``` javascript
 // 定义Welcome组件
 function Welcome(props) {
     return <h1>Hello, {props.name}</h1>;
@@ -145,7 +145,7 @@ ReactDOM.render(
 
 使用下面的方式来重写上面计时器的例子：
 
-```
+``` javascript
 // 声明一个自定义组件Clock
 class Clock extends React.Component {
 
@@ -205,7 +205,7 @@ ReactDOM.render(
 
 下面代码使用了事件并向事件传递参数：
 
-```
+``` javascript
 // 声明自定义组件
 class Toggle extends React.Component {
     constructor(props) {
@@ -249,7 +249,7 @@ React支持多种语法形式来调用事件和传递参数。
 
 使用if语句：
 
-```
+``` javascript
 function UserGreeting(props) {
     return <h1>Welcome back!</h1>;
 }
@@ -278,7 +278,7 @@ ReactDOM.render(
 
 使用map()打印列表：
 
-```
+``` javascript
 function ListItem(props) {
     // 这里不需要指定key
     return <li>{props.value}</li>;
@@ -310,7 +310,7 @@ ReactDOM.render(
 
 表单处理用这样的方法：
 
-```
+``` javascript
 class NameForm extends React.Component {
     constructor(props) {
         super(props);
@@ -358,3 +358,26 @@ ReactDOM.render(
 ### 组合 vs 继承
 
 React推荐大量使用组合而不是继承，可用预定义属性{props.children}或者其他自定义属性来实现各种组件的组合。
+
+
+## 高级入门
+
+### 关于JSX
+
+JSX允许使用点表示法来引用组件：
+
+``` javascript
+import React from 'react';
+
+const MyComponents = {
+    DatePicker: function DatePicker(props) {
+        return <div>Imagine a {props.color} datepicker here.</div>
+    }
+}
+
+function BlueDatePicker() {
+    return <MyComponents.DatePicker color="blue">;
+}
+```
+
+JSX中，首字母大写表示自定义组件，小写字母开头表示内置的组件，如div。所有组件必须闭合。
