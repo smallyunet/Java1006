@@ -117,3 +117,6 @@ Javabean是符合某种特定规范的Java类
 
 JSP动作元素为请求处理阶段提供信息
 
+### 在Jsp页面中使用Javabean
+
+像使用普通类一样使用Javabean
