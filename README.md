@@ -25,4 +25,6 @@
 
     - build-a-hn-front-page （使用 React + Webpack 构建 Hacker News 的前端页面，在线预览： http://ychs-web.smallyu.net/demo3 ）
 
+    - StudentInfo （使用MERN搭建一个学生信息管理系统）
+
 - TypingSpeed （金山打字测速）

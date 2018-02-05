@@ -119,4 +119,12 @@ JSP动作元素为请求处理阶段提供信息
 
 ### 在Jsp页面中使用Javabean
 
-像使用普通类一样使用Javabean
+1. 像使用普通类一样使用Javabean
+2. 在Jsp页面中使用jsp动作标签使用javabean
+    - <jsp:useBeans>
+    - <jsp:setProperty>
+    - <jsp:getProperty>
+
+### 案例代码
+
+> Chapter2
