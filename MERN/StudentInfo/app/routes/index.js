@@ -27,7 +27,7 @@ var Table = mongoose.model('Table', Schema);
  */
 router.get('/', function(req, res, next) {
   Table.find(function(err, students) {
-    res.render('index', { title: 'Students Info Manager System' });
+    res.render('index');
   });
 });
 
@@ -35,7 +35,7 @@ router.get('/', function(req, res, next) {
  * 接口，返回所有数据，忽略_id和__v
  */
 router.get('/getAll', function(req, res, next) {
-  Table.find({}, { _id: 0, __v: 0}, function(err, students) {
+  Table.find({}, { _id: 0, __v: 0}, function(err, datas) {
     if (!err) {
       var error = 0;
       var status = 'success';
@@ -45,9 +45,37 @@ router.get('/getAll', function(req, res, next) {
       error: error,
       status: status,
       date: date,
-      results: students
+      results: datas
     });
   });
 });
+
+/**
+ * 新增接口
+ */
+router.post('/add', function(req, res, next) {
+  Table.create(req.body);
+  res.send('200');
+});
+
+/** 
+ * 删除接口
+ */
+router.get('/:id/del', function(req, res, next) {
+  Table.deleteOne({
+    id: req.params.id
+  }, function(any) {
+    res.redirect('/');
+  });
+});
+
+/**
+ * 得到最新的一条记录
+ */
+router.get('/getOne', function(req, res,next) {
+  Table.find(function(err, data) {
+    res.json(data);
+  }).sort({ _id: -1 }).limit(1);
+})
 
 module.exports = router;

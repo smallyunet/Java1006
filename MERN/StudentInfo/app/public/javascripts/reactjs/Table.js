@@ -20,6 +20,12 @@ function Tr (props) {
       {Object.keys(props.value).map((key) => 
         <Td key={key} value={props.value[key]}/>
       )}
+      <td>
+      <a href={'/' + props.value.id + '/edit'} className="btn btn-secondary btn-sm" role="button">编辑</a>
+      </td>
+      <td>
+        <a href={'/' + props.value.id + '/del'} className="btn btn-info btn-sm" role="button">删除</a>
+      </td>
     </tr>
   );
 }
@@ -39,11 +45,13 @@ function Td (props) {
  */
 function Thead (props) {
     return (
-      <thead>
+      <thead className="thead-dark">
           <tr>
             {Object.keys(props.datas[0]).map((key) => 
               <Th key={key} value={key}/>
             )}
+            <th scope="col">编辑</th>
+            <th scope="col">删除</th>
           </tr>
         </thead>
     );
@@ -92,27 +100,20 @@ class Table extends React.Component {
     };
   }
 
-  /**
-   * 构造方法，从接口取得数据，设置状态
-   */
+  // 构造函数，从接口获取值
   componentDidMount() {
-    var _this = this;
-    $.getJSON('/getAll', function(datas) {
-      _this.setState(datas);
+    let _this = this;
+    $.getJSON('/getAll', function(req) {
+      _this.setState(req);
     });
   }
-
-  /**
-   * 析构方法，保留
-   */
-  componentWillUnmount() {}
 
   /**
    * 组件返回
    */
   render() {
     return (
-      <table className="table table-hover">
+      <table className="table table-hover table-striped table-sm table-bordered text-center">
         <Thead datas={this.state.results}/>
         <Tbody datas={this.state.results}/>
       </table>
