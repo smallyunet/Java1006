@@ -1,0 +1,59 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  // 使用jade模板语言
+  section#wrapper
+    h2 Basic Structure
+    section
+      p
+        span This is a span within a p within a div!
+
+  // 定义变量并使用
+  - var name = "Smallyu"
+  h1 Hello #{name}!
+
+  // 使用each迭代
+  - users = ['Sally', 'Joseph', 'Michael', 'Sanjay']
+  - each user in users
+    p= user
+  // 使用for迭代
+  - for user in users
+    p=user
+  // 使用对象迭代
+  - obj = {frist_name: 'Small', surname: 'Yu'}
+  - each val, key in obj
+    li #{key}: #{val}
+
+  // 使用条件
+  - awake = false
+  - if (awake)
+    p You are awake! Make coffee!
+  - else
+    p You are sleeping
+
+  // 使用内联JavaScript
+  script.
+    alert ('Inline JavaScript in Jade')
+
+  // 使用包含
+  h1 Jade Includes Example
+  include includes/footer
+
+  // 使用Jade特有的Minix
+  mixin users(users)
+   ul
+     each user in users
+       li= user
+
+
+  - users = ['Krist', 'Kurt', 'Dava']
+  mixin users(users)
+
+
+
+
+
+

@@ -13,10 +13,11 @@
     - dayN （课程第N天课堂笔记）
 
 - Java
-    - JavaClassic （《Java开发实战经典》阅读笔记）
-    - JSP-imooc （慕课网 [JAVA遇见HTML——JSP篇](https://www.imooc.com/learn/166) 课程笔记。）
-
-- MERN
+    - SelfStudy
+        - JavaClassic （《Java开发实战经典》阅读笔记）
+        - JavaWebClassic （《JavaWeb开发实战经典》阅读笔记）
+   
+- WebDev
 
     - Node.jsClassic （《Node.js入门经典》阅读笔记）
         - Chapter08 （Tasks小案例，在线预览： http://ychs-web.smallyu.net:3030/tasks ）
@@ -25,6 +26,6 @@
 
     - build-a-hn-front-page （使用 React + Webpack 构建 Hacker News 的前端页面，在线预览： http://ychs-web.smallyu.net/demo3 ）
 
-    - StudentInfo （使用MERN搭建一个学生信息管理系统）
+    - StudentInfo （使用MERN管理学生信息表，在线预览： http://ychs-web.smallyu.net:3002 ）
 
 - TypingSpeed （金山打字测速）
