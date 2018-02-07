@@ -31,6 +31,33 @@ router.get('/', function(req, res, next) {
   });
 });
 
+
+/**
+ * 新增接口
+ */
+router.post('/add', function(req, res, next) {
+  Table.create(req.body);
+  res.send('200');
+});
+
+/**
+ * 编辑接口
+ */
+router.post('/:id/edit', function(req, res, next) {
+  Table.update({ id: req.params.id }, req.body, function(any) {
+    res.send('200');
+  })
+});
+
+/** 
+ * 删除接口
+ */
+router.get('/:id/del', function(req, res, next) {
+  Table.deleteOne({ id: req.params.id }, function(any) {
+    res.redirect('/');
+  });
+});
+
 /**
  * 接口，返回所有数据，忽略_id和__v
  */
@@ -51,31 +78,21 @@ router.get('/getAll', function(req, res, next) {
 });
 
 /**
- * 新增接口
- */
-router.post('/add', function(req, res, next) {
-  Table.create(req.body);
-  res.send('200');
-});
-
-/** 
- * 删除接口
- */
-router.get('/:id/del', function(req, res, next) {
-  Table.deleteOne({
-    id: req.params.id
-  }, function(any) {
-    res.redirect('/');
-  });
-});
-
-/**
  * 得到最新的一条记录
  */
-router.get('/getOne', function(req, res,next) {
+router.get('/getLatest', function(req, res, next) {
   Table.find(function(err, data) {
     res.json(data);
   }).sort({ _id: -1 }).limit(1);
-})
+});
+
+/**
+ * 根据ID获取记录
+ */
+router.get('/:id/getOne', function(req, res, next) {
+  Table.find({ id: req.params.id }, { _id: 0, __v: 0}, function(err, data) {
+    res.json(data);
+  });
+});
 
 module.exports = router;

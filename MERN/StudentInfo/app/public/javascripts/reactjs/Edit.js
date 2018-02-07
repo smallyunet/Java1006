@@ -6,35 +6,33 @@ import $ from 'jquery';
 
 
 /**
- * Add模块
+ * Edit模块
  */
-class Add extends React.Component {
+class Edit extends React.Component {
 
     constructor(props) {
         super(props);
 
-        // 初始值
-        this.state = {
-            id: '',
-            school: '',
-            class: '',
-            name: '',
-            gender: 'female',
-            age: '',
-            tel: '',
-            birthplace: ''
-        };
-
         this.handleInputChange = this.handleInputChange.bind(this);
-        this.sendAddPost = this.sendAddPost.bind(this);
+        this.sendEditPost = this.sendEditPost.bind(this);
+
+        this.state = {
+            id: "##",
+            school: "##",
+            class: "##",
+            name: "##",
+            gender: "##",
+            age: "##",
+            tel: "##",
+            birthplace: "##"
+        };
     }
 
-    // 更新id值，自增，从getOne接口查询
-    componentDidMount() {
+    // 属性更新时立即执行，接收参数
+    componentWillReceiveProps(nextProps) {
         let _this = this;
-        $.getJSON('/getOne', function (req){
-            let id = req[0].id == null ? 1 : (req[0].id + 1);
-            _this.setState({ id: id });
+        $.getJSON('/' + nextProps.data + '/getOne', function(data) {
+          _this.setState(data[0]);
         });
     }
 
@@ -46,12 +44,10 @@ class Add extends React.Component {
     }
 
     // 发送新增请求，并关闭modal
-    sendAddPost() {
+    sendEditPost() {
         let _this = this;
-        $.post('/add', this.state, function(req) {
+        $.post('/' + this.state.id + '/edit', this.state, function(req) {
             location.reload();
-            // 关闭modal的方法，暂时保留
-            // $('#exampleModalCenter').modal('hide');
         }, 'json');
     }
 
@@ -61,7 +57,7 @@ class Add extends React.Component {
                 <div className="modal-dialog modal-dialog-centered" role="document">
                 <div className="modal-content">
                     <div className="modal-header">
-                    <h5 className="modal-title" id="exampleModalLongTitle">添加信息</h5>
+                    <h5 className="modal-title" id="exampleModalLongTitle">编辑信息</h5>
                     <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -115,7 +111,7 @@ class Add extends React.Component {
                             <fieldset className="form-group">
                                 <div className="row">
                                 <legend className="col-form-label col-sm-2 pt-0">性别</legend>
-                                    <div className="col-sm-10">
+                                    <div className="col-sm-10 text-left pl-3">
                                         <div className="form-check form-check-inline">
                                             <input 
                                                 className="form-check-input" 
@@ -133,7 +129,6 @@ class Add extends React.Component {
                                                 name="gender" 
                                                 id="inlineRadio2" 
                                                 value="female"
-                                                checked
                                                 onChange={this.handleInputChange} />
                                             <label className="form-check-label" htmlFor="inlineRadio2">女</label>
                                         </div>
@@ -188,13 +183,14 @@ class Add extends React.Component {
                     </div>
                     <div className="modal-footer">
                     <button type="button" className="btn btn-secondary" data-dismiss="modal">取消</button>
-                    <button type="button" className="btn btn-primary" onClick={this.sendAddPost}>确认</button>
+                    <button type="button" className="btn btn-primary" onClick={this.sendEditPost}>确认</button>
                     </div>
                 </div>
                 </div>
             </div>
+            
         );
     }
 }
 
-export default Add;
+export default Edit;

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import Edit from './Edit';
 
 /**
  * @description Th
@@ -10,25 +11,6 @@ function Th (props) {
   return <th scope="col">{props.value}</th>;
 }
 
-/**
- * @description Tr
- * @param {Object} props { key: value }
- */
-function Tr (props) {
-  return (
-    <tr>
-      {Object.keys(props.value).map((key) => 
-        <Td key={key} value={props.value[key]}/>
-      )}
-      <td>
-      <a href={'/' + props.value.id + '/edit'} className="btn btn-secondary btn-sm" role="button">编辑</a>
-      </td>
-      <td>
-        <a href={'/' + props.value.id + '/del'} className="btn btn-info btn-sm" role="button">删除</a>
-      </td>
-    </tr>
-  );
-}
 
 /**
  * @description Td
@@ -57,19 +39,53 @@ function Thead (props) {
     );
 }
 
+
 /**
- * @description 表格主体
- * @param {Object} props { datas: [{}, {}, ... ] }
- * @returns {Component} 子组件
+ * Tbody组件
  */
-function Tbody (props) {
-  return (
-    <tbody>
-      {props.datas.map((value) => 
-        <Tr key={value.id} value={value} />
-      )}
-    </tbody>
-  );
+class Tbody extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { id: 0 }
+
+    this.clickEditButton = this.clickEditButton.bind(this);
+  }
+
+  // 点击后获取触发编辑的记录id
+  clickEditButton(event) {
+    this.setState({ id: event.target.value });
+  }
+
+  render() {
+    return(
+      <tbody>
+        {this.props.datas.map((value) => 
+
+          <tr key={value.id}>
+            {Object.keys(value).map((key) => 
+              <Td key={key} value={value[key]}/>
+            )}
+            <td>
+              <button type="button" 
+                    className="btn btn-secondary btn-sm" 
+                    data-toggle="modal" 
+                    data-target="#exampleModalCenter2"
+                    value={value.id}
+                    onClick={this.clickEditButton} >
+                编辑
+              </button>
+            </td>
+            <td>
+              <a href={'/' + value.id + '/del'} className="btn btn-info btn-sm" role="button">删除</a>
+            </td>
+          </tr> 
+
+        )}
+        <Edit data={this.state.id}/>
+      </tbody>
+    );
+  }
 }
 
 /**
@@ -87,7 +103,7 @@ class Table extends React.Component {
       date: "2019.01.01",
       results: [
         {
-          id: "##",
+          id: 0,
           school: "##",
           class: "##",
           name: "##",
@@ -98,13 +114,17 @@ class Table extends React.Component {
         }
       ]
     };
+
   }
+
 
   // 构造函数，从接口获取值
   componentDidMount() {
     let _this = this;
     $.getJSON('/getAll', function(req) {
-      _this.setState(req);
+      if (req.results.length != 0) {
+        _this.setState(req);
+      }
     });
   }
 
@@ -112,6 +132,7 @@ class Table extends React.Component {
    * 组件返回
    */
   render() {
+    console.log(this.state.results);
     return (
       <table className="table table-hover table-striped table-sm table-bordered text-center">
         <Thead datas={this.state.results}/>

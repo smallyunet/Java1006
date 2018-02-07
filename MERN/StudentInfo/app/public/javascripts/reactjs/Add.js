@@ -32,8 +32,8 @@ class Add extends React.Component {
     // 更新id值，自增，从getOne接口查询
     componentDidMount() {
         let _this = this;
-        $.getJSON('/getOne', function (req){
-            let id = req[0].id == null ? 1 : (req[0].id + 1);
+        $.getJSON('/getLatest', function (req){
+            let id = req.length == 0 ? 1 : (req[0].id + 1);
             _this.setState({ id: id });
         });
     }
@@ -69,7 +69,7 @@ class Add extends React.Component {
                         </div>
                         <div className="modal-body">
                         
-                            <form>
+                            <form className="text-center">
     
                                 <div className="form-group row">
                                     <label htmlFor="btn-school" className="col-sm-2 col-form-label">学校</label>
@@ -116,7 +116,7 @@ class Add extends React.Component {
                                 <fieldset className="form-group">
                                     <div className="row">
                                     <legend className="col-form-label col-sm-2 pt-0">性别</legend>
-                                        <div className="col-sm-10">
+                                        <div className="col-sm-10 text-left pl-3">
                                             <div className="form-check form-check-inline">
                                                 <input 
                                                     className="form-check-input" 
