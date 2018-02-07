@@ -1,30 +1,0 @@
-Script started on 2018年01月24日 星期三 18时48分38秒
-]0;smallyu@deepin: ~/Documents/Code/yckj_git/Java1006/MERN/Node.jsClassic/Chapter16[01;32msmallyu@deepin[00m:[01;34m~/Documents/Code/yckj_git/Java1006/MERN/Node.jsClassic/Chapter16[00m$ , [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C. / [Kscript 
-bash: ./script: /user/bin/env: 解释器错误: 没有那个文件或目录
-]0;smallyu@deepin: ~/Documents/Code/yckj_git/Java1006/MERN/Node.jsClassic/Chapter16[01;32msmallyu@deepin[00m:[01;34m~/Documents/Code/yckj_git/Java1006/MERN/Node.jsClassic/Chapter16[00m$ .//script 
-my first node script!
-]0;smallyu@deepin: ~/Documents/Code/yckj_git/Java1006/MERN/Node.jsClassic/Chapter16[01;32msmallyu@deepin[00m:[01;34m~/Documents/Code/yckj_git/Java1006/MERN/Node.jsClassic/Chapter16[00m$ s cript
-Script started, file is typescript
-]0;smallyu@deepin: ~/Documents/Code/yckj_git/Java1006/MERN/Node.jsClassic/Chapter16[01;32msmallyu@deepin[00m:[01;34m~/Documents/Code/yckj_git/Java1006/MERN/Node.jsClassic/Chapter16[00m$ . /script
-my first node script!
-]0;smallyu@deepin: ~/Documents/Code/yckj_git/Java1006/MERN/Node.jsClassic/Chapter16[01;32msmallyu@deepin[00m:[01;34m~/Documents/Code/yckj_git/Java1006/MERN/Node.jsClassic/Chapter16[00m$ l s- l
-bash: ls-: 未找到命令
-]0;smallyu@deepin: ~/Documents/Code/yckj_git/Java1006/MERN/Node.jsClassic/Chapter16[01;32msmallyu@deepin[00m:[01;34m~/Documents/Code/yckj_git/Java1006/MERN/Node.jsClassic/Chapter16[00m$ l s -l
-总用量 24
--rw-r--r-- 1 smallyu smallyu 460 1月  24 18:27 [0m[38;5;42mprocess2.js[0m
--rw-r--r-- 1 smallyu smallyu 409 1月  24 18:37 [38;5;42mprocess3.js[0m
--rw-r--r-- 1 smallyu smallyu  25 1月  24 18:16 [38;5;42mprocess.js[0m
--rw-r--r-- 1 smallyu smallyu 231 1月  24 18:49 [38;5;184mREADME.md[0m
--rwxr-xr-x 1 smallyu smallyu  57 1月  24 18:49 [38;5;80mscript[0m
--rw-r--r-- 1 smallyu smallyu  45 1月  24 19:15 [38;5;167mscript2[0m
--rw-r--r-- 1 smallyu smallyu   0 1月  24 18:49 [38;5;167mtypescript[0m
-]0;smallyu@deepin: ~/Documents/Code/yckj_git/Java1006/MERN/Node.jsClassic/Chapter16[01;32msmallyu@deepin[00m:[01;34m~/Documents/Code/yckj_git/Java1006/MERN/Node.jsClassic/Chapter16[00m$ c homd [K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cc hmod +x script2
-]0;smallyu@deepin: ~/Documents/Code/yckj_git/Java1006/MERN/Node.jsClassic/Chapter16[01;32msmallyu@deepin[00m:[01;34m~/Documents/Code/yckj_git/Java1006/MERN/Node.jsClassic/Chapter16[00m$ l s
-[0m[38;5;42mprocess2.js[0m  [38;5;42mprocess3.js[0m  [38;5;42mprocess.js[0m  [38;5;184mREADME.md[0m  [38;5;80mscript[0m  [38;5;80mscript2[0m  [38;5;167mtypescript[0m
-]0;smallyu@deepin: ~/Documents/Code/yckj_git/Java1006/MERN/Node.jsClassic/Chapter16[01;32msmallyu@deepin[00m:[01;34m~/Documents/Code/yckj_git/Java1006/MERN/Node.jsClassic/Chapter16[00m$ . /script
-my first node script!
-]0;smallyu@deepin: ~/Documents/Code/yckj_git/Java1006/MERN/Node.jsClassic/Chapter16[01;32msmallyu@deepin[00m:[01;34m~/Documents/Code/yckj_git/Java1006/MERN/Node.jsClassic/Chapter16[00m$ .//script2
-[ '/usr/bin/nodejs',
-  '
