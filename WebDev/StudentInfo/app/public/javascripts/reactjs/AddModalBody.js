@@ -1,18 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap';
 import $ from 'jquery';
 
-
 /**
- * Add模块
+ * AddModalBody模块
  */
-class Add extends React.Component {
+class AddModalBody extends React.Component {
 
     constructor(props) {
         super(props);
-
+  
         // 初始值
         this.state = {
             id: '',
@@ -24,37 +22,45 @@ class Add extends React.Component {
             tel: '',
             birthplace: ''
         };
-
+  
         this.handleInputChange = this.handleInputChange.bind(this);
         this.sendAddPost = this.sendAddPost.bind(this);
     }
-
+  
     // 更新id值，自增，从getOne接口查询
     componentDidMount() {
-        let _this = this;
-        $.getJSON('/getLatest', function (req){
-            let id = req.length == 0 ? 1 : (req[0].id + 1);
-            _this.setState({ id: id });
-        });
+      this.getLatestId();
     }
-
-    // 获取表单数据
+    
+    // 得到最新ID，回调会用，所以抽离出来
+    getLatestId() {
+      let _this = this;
+      $.getJSON('/getLatest', function (req){
+          let id = req.length == 0 ? 1 : (req[0].id + 1);
+          _this.setState({ id: id });
+      });
+    }
+  
+    // 获取表单数据，add的表单没有像edit一样提升到body
+    // edit本身其实不需要提
     handleInputChange(event) {
         this.setState({
             [event.target.name] : event.target.value
         });
     }
-
-    // 发送新增请求，并关闭modal
+  
+    // 发送新增请求，并关闭modal，得到最新ID
     sendAddPost() {
         let _this = this;
         $.post('/add', this.state, function(req) {
-            location.reload();
+            // location.reload();
             // 关闭modal的方法，暂时保留
-            // $('#exampleModalCenter').modal('hide');
+            _this.getLatestId();
+            _this.props.refreshAll();
+            $('#exampleModalCenter').modal('hide');
         }, 'json');
     }
-
+  
     render () {
         return (
             <div>
@@ -207,4 +213,4 @@ class Add extends React.Component {
     }
 }
 
-export default Add;
+export default AddModalBody;

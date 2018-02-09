@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <style>
+        .class2 {
+            background: #444;
+            color: #eee;
+        }
+    </style>
+    <title>test1</title>
+</head>
+<body>
+
+    <div id="app">
+
+        <!-- 使用双括号实现文本插值 -->
+        <p>{{ message }}</p>
+
+        <hr>
+        <!-- 使用v-html指令输出html代码 -->
+        <div v-html="message2"></div>
+
+        <hr>
+        <!-- 当class1为true，div使用class2的样式 -->
+        <div v-bind:class="{'class2': class1}">一段文本内容</div>
+
+        <hr>
+        <!-- 使用checkbox动态指定class1的值 -->
+        <input type="checkbox" v-model="class1">
+
+        <hr>
+        <!-- 支持表达式 -->
+        {{ 5+5 }}
+        <br>
+        {{ ok ? 'yes'  :'no' }}
+        <br>
+        {{ message.split('').reverse().join('') }}
+        <div v-bind:id="'list-' + id">菜鸟教程</div>
+
+        <hr>
+        <!-- 指令 -->
+        <p v-if="seen">现在你看到我了</p>
+
+        <hr>
+        <!-- 参数 -->
+        <pre><a v-bind:href="url">链接</a></pre>
+
+        <hr>
+        <!-- 输入框输入数据 -->
+        <input v-model="message">
+
+        <hr>
+        <!-- on监听事件 -->
+        <button v-on:click="reverseMessage">反转字符串</button>
+
+        <hr>
+        {{ message | capitalize }}
+
+    </div>
+
+
+    <script>
+
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue.js!',
+                message2: '<h1>菜鸟教程</h1>',
+                class1: false,
+                ok: true,
+                id: 1,
+                seen:true,
+                url: 'http://baidu.com'
+            },
+            methods: {
+                reverseMessage: function() {
+                    this.message = this.message.split('').reverse().join('')
+                }
+            },
+            filters: {
+                capitalize: function (value) {
+                    if (!value) return ''
+                    value = value.toString()
+                    return value.charAt(0).toUpperCase() + value.slice(1)
+                }
+            }
+        })
+
+    </script>
+
+</body>
+</html>

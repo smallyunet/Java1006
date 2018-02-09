@@ -54,7 +54,7 @@ router.post('/:id/edit', function(req, res, next) {
  */
 router.get('/:id/del', function(req, res, next) {
   Table.deleteOne({ id: req.params.id }, function(any) {
-    res.redirect('/');
+    res.send('200');
   });
 });
 

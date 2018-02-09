@@ -76,7 +76,7 @@ class StringBufferDemo05 {
 /**
  * 5.字符串截取
  */
- class StringBufferDemo06 {
+ class StringBufferDemo05 {
     public static void main(String[] args) {
         StringBuffer buf = new StringBuffer();
         buf.append("Hello ").append("World!!");
@@ -107,9 +107,36 @@ class StringBufferDemo07 {
         StringBuffer buf = new StringBuffer();
         buf.append("Hello ").append("World!!");
         if (buf.indexOf("Hello") == -1) {
-            System.out.println("没有找到指定内容")；
+            System.out.println("没有找到指定内容");
         } else {
-            System.out.println("可以找到指定内容")；
+            System.out.println("可以找到指定内容");
         }
+    }
+}
+
+/**
+ * 8. 关于String类时，有过这样的代码
+ */
+class StringBufferDemo08 {
+    public static void main(String[] args) {
+        String str1 = "smallyu";
+        for (int i = 0; i < 100; i++) {
+            str1 += i;      // 不断修改String的内存和引用，性能低
+        }
+        System.out.println(str1);
+    }
+}
+
+/**
+ * 9. 使用StringBuffer完成要求
+ */
+ class StringBufferDemo09 {
+    public static void main(String[] args) {
+        StringBuffer buf = new StringBuffer();
+        buf.append("smallyu");
+        for (int i = 0; i < 100; i++) {
+            buf.append(i);      // 不断修改String的内存和引用，性能低
+        }
+        System.out.println(buf);
     }
 }

@@ -1,3 +1,11 @@
+### 2018.02.09
+
+没图
+
+### 2018.02.08
+
+![TypingSpeed](images/08.png)
+
 ### 2018.02.07
 
 ![TypingSpeed](images/07.png)

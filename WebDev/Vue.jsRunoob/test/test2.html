@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <style>
+        .class2 {
+            background: #444;
+            color: #eee;
+        }
+    </style>
+    <title>test2</title>
+</head>
+<body>
+
+    <div id="app">
+
+        <p v-if="seen">可以看到</p>
+        <p v-if="ok">看不到</p>
+
+        <!-- {{#if seen}}
+            aaa
+        {{/if}} -->
+
+        <div v-if="Math.random() > 0.5">
+            > 0.5
+        </div>
+        <div v-else>
+            !> 0.5
+        </div>
+
+        <hr>
+        <div v-for="site in sites">
+            {{site.name}}
+        </div>
+
+        <hr>
+        <template v-for="site in sites">
+            <li>{{ site.name }}</li>
+        </template>
+
+    </div>
+
+
+    <script>
+
+        new Vue({
+            el: '#app',
+            data: {
+                seen: true,
+                ok: false,
+
+                sites: [
+                    {name:'a'},
+                    {name:'b'},
+                    {name:'c'}
+                ]
+            }
+        })
+
+    </script>
+
+</body>
+</html>
