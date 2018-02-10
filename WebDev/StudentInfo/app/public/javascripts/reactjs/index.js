@@ -7,6 +7,8 @@ import Table from './Table';
 import EditModalBody from './EditModalBody';
 import AddModalBody from './AddModalBody';
 
+import loading from '../../images/loading.gif';
+import style from '../../stylesheets/style.css';
 
 /**
  * Body父组件
@@ -40,27 +42,72 @@ class Body extends React.Component {
       gender: '',
       age: '',
       tel: '',
-      birthplace: ''
+      birthplace: '',
+      nowPage:1,
+      pagesLis: [],
+      lastPage: 1
     };
 
     this.refreshAll = this.refreshAll.bind(this);
   }
 
   // 构造函数，从接口获取值，初始化
-  componentDidMount() {
+  componentWillMount() {
     this.refreshAll();
+
+    $('#loading').hide();
   }
   
   /**
    * 刷新所有数据
    */
-  refreshAll () {
+  refreshAll (pages, limit) {
+
+    $('#loading').show();
+
     let _this = this;
-    $.getJSON('/getAll', function(req) {
+
+    // 得到总条数信息
+    $.get('/getAllCount', function(count) {
+      let lis = [];
+      let allPages = Math.ceil(count/10);
+      // 为分页li做准备
+      for (var i = 1; i <= allPages; i++) {
+          lis.push(i);
+      }
+      // 保存状态
+      _this.setState({
+          pagesLis: lis,
+          lastPage: allPages
+      });
+    });
+
+    // ****************************
+
+    // 如果页数参数为空
+    if (!pages) {
+      // 如果目前没有位于第一页。则保留当前页数
+      if (this.state.nowPage != 1) {
+          pages = this.state.nowPage;
+      } else {
+        // 否则回到首页
+        pages = 1
+      }
+    } // 否则使用参数
+    if (!limit) limit = 10;
+    
+    // 保存当前页数
+    this.setState({ nowPage: pages });
+
+    // 得到数据
+    $.getJSON('/getAll?pages=' + pages + '&limit=' + limit, function(req) {
       if (req.results.length != 0) {
         _this.setState(req);
+
+        $('#loading').hide();
       }
     });
+    
   }
 
   // 编辑按钮点击，点击后获取触发编辑的记录id
@@ -74,22 +121,6 @@ class Body extends React.Component {
     this.setState({ id: event.target.value });
   }
 
-  // 获取表单数据，非受控组件
-  handleInputChange(event) {
-    this.setState({
-        [event.target.name] : event.target.value
-    });
-  }
-
-  // 发送新增请求，并关闭modal
-  sendEditPost() {
-    let _this = this;
-    $.post('/' + this.state.id + '/edit', this.state, function(req) {
-        _this.refreshAll();
-        $('#exampleModalCenter2').modal('hide');
-    }, 'json');
-  }
-
   // 返回
   render() {
     return (
@@ -99,12 +130,15 @@ class Body extends React.Component {
           clickEditButton={this.clickEditButton.bind(this)}
           refreshAll={this.refreshAll} />
         
-        <EditModalBody 
-          datas={this.state} 
-          handleInputChange={this.handleInputChange.bind(this)} 
-          sendEditPost={this.sendEditPost.bind(this)} />
+        <EditModalBody datas={this.state} refreshAll={this.refreshAll} />
 
-        <AddModalBody refreshAll={this.refreshAll} />
+        <AddModalBody refreshAll={this.refreshAll}
+                    pagesLis={this.state.pagesLis}
+                    lastPage={this.state.lastPage}
+                    nowPage={this.state.nowPage} />
+
+        <div id="loading"><img src={loading} alt="loading.gif"/></div>
+
       </div>
     );
   }

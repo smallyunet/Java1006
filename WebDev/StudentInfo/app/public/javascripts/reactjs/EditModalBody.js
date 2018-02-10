@@ -13,8 +13,8 @@ class EditModalBody extends React.Component {
   
       this.state = props.datas;
   
-      this.handleInputChange = props.handleInputChange;
-      this.sendEditPost = props.sendEditPost;
+      this.handleInputChange = this.handleInputChange.bind(this);
+      this.sendEditPost = this.sendEditPost.bind(this);
     }
   
     // 属性改变立即渲染
@@ -25,6 +25,22 @@ class EditModalBody extends React.Component {
           _this.setState(req[0]);
         }
       });
+    }
+
+    // 获取表单数据
+    handleInputChange(event) {
+        this.setState({
+            [event.target.name] : event.target.value
+        });
+    }
+
+    // 发送新增请求，并关闭modal
+    sendEditPost() {
+        let _this = this;
+        $.post('/' + this.state.id + '/edit', this.state, function(req) {
+            _this.props.refreshAll();
+            $('#exampleModalCenter2').modal('hide');
+        }, 'json');
     }
   
     // 返回
@@ -49,7 +65,8 @@ class EditModalBody extends React.Component {
                         className="form-control" 
                         id="btn-school" 
                         placeholder="太原工业学院" 
-                        name="school" 
+                        name="school"
+                        value={this.state.school}
                         onChange={this.handleInputChange} />
                     </div>
                 </div>
@@ -63,6 +80,7 @@ class EditModalBody extends React.Component {
                         id="btn-class" 
                         name="class"
                         placeholder="152027100" 
+                        value={this.state.class}
                         onChange={this.handleInputChange} />
                     </div>
                 </div>
@@ -76,6 +94,7 @@ class EditModalBody extends React.Component {
                         id="btn-name" 
                         name="name"
                         placeholder="smallyu" 
+                        value={this.state.name}
                         onChange={this.handleInputChange} />
                     </div>
                 </div>
@@ -89,20 +108,20 @@ class EditModalBody extends React.Component {
                                     className="form-check-input" 
                                     type="radio" 
                                     name="gender" 
-                                    id="inlineRadio1" 
+                                    id="inlineRadio3" 
                                     value="male"
                                     onChange={this.handleInputChange} />
-                                <label className="form-check-label" htmlFor="inlineRadio1">男</label>
+                                <label className="form-check-label" htmlFor="inlineRadio3">男</label>
                             </div>
                             <div className="form-check form-check-inline">
                                 <input 
                                     className="form-check-input" 
                                     type="radio" 
                                     name="gender" 
-                                    id="inlineRadio2" 
+                                    id="inlineRadio4" 
                                     value="female"
                                     onChange={this.handleInputChange} />
-                                <label className="form-check-label" htmlFor="inlineRadio2">女</label>
+                                <label className="form-check-label" htmlFor="inlineRadio4">女</label>
                             </div>
                         </div>
                     </div>
@@ -117,6 +136,7 @@ class EditModalBody extends React.Component {
                         id="btn-age" 
                         name="age"
                         placeholder="22" 
+                        value={this.state.age}
                         onChange={this.handleInputChange} />
                     </div>
                 </div>
@@ -130,6 +150,7 @@ class EditModalBody extends React.Component {
                         id="btn-tel" 
                         name="tel"
                         placeholder="166 6666 6666" 
+                        value={this.state.tel}
                         onChange={this.handleInputChange} />
                     </div>
                 </div>
@@ -143,6 +164,7 @@ class EditModalBody extends React.Component {
                         id="btn-birthplace" 
                         placeholder="山西省太原市" 
                         name="birthplace"
+                        value={this.state.birthplace}
                         onChange={this.handleInputChange} />
                     </div>
                 </div>

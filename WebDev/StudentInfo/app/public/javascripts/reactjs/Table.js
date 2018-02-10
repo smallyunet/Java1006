@@ -34,7 +34,6 @@ class Table extends React.Component {
   
     // 匹配输出表格头部的th文字
     wordsTransform (words) {
-        console.log(words);
         switch (words) {
             case 'id':
                 return '序号';

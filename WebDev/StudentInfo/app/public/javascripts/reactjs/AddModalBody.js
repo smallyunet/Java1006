@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import 'bootstrap';
 import $ from 'jquery';
 
+import Pages from './Pages';
+
 /**
  * AddModalBody模块
  */
@@ -28,7 +30,7 @@ class AddModalBody extends React.Component {
     }
   
     // 更新id值，自增，从getOne接口查询
-    componentDidMount() {
+    componentWillMount() {
       this.getLatestId();
     }
     
@@ -201,7 +203,12 @@ class AddModalBody extends React.Component {
                 </div>
     
                 <div className="row">
-                    <div className="col-10"></div>
+                    <div className="col-10">
+                        <Pages refreshAll={this.props.refreshAll}
+                                pagesLis={this.props.pagesLis}
+                                lastPage={this.props.lastPage}
+                                nowPage={this.props.nowPage} />
+                    </div>
                     <div className="col-2">
                         <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
                             新增一条数据

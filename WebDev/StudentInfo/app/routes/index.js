@@ -26,9 +26,7 @@ var Table = mongoose.model('Table', Schema);
  * 首页路由，渲染了index视图
  */
 router.get('/', function(req, res, next) {
-  Table.find(function(err, students) {
-    res.render('index');
-  });
+  res.render('index');
 });
 
 
@@ -62,7 +60,23 @@ router.get('/:id/del', function(req, res, next) {
  * 接口，返回所有数据，忽略_id和__v
  */
 router.get('/getAll', function(req, res, next) {
-  Table.find({}, { _id: 0, __v: 0}, function(err, datas) {
+
+  // 分页相关
+  const pages = parseInt(req.query.pages);
+  const limit = parseInt(req.query.limit);
+
+  if ((typeof pages != 'number') | pages < 1) {
+    pages = 1;
+  }
+
+  if ((typeof limit != 'number' | limit < 1)) {
+    limit = 10;
+  }
+
+  // 查表
+  Table.find({}, 
+    { _id: 0, __v: 0}, 
+    function(err, datas) {
     if (!err) {
       var error = 0;
       var status = 'success';
@@ -74,7 +88,7 @@ router.get('/getAll', function(req, res, next) {
       date: date,
       results: datas
     });
-  });
+  }).limit(limit).skip((pages - 1) * limit);
 });
 
 /**
@@ -92,6 +106,15 @@ router.get('/getLatest', function(req, res, next) {
 router.get('/:id/getOne', function(req, res, next) {
   Table.find({ id: req.params.id }, { _id: 0, __v: 0}, function(err, data) {
     res.json(data);
+  });
+});
+
+/**
+ * 总记录条数
+ */
+router.get('/getAllCount', function(req, res, next) {
+  Table.find().count(function(err, count){
+    res.send(200, count);
   });
 });
 

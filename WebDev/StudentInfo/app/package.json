@@ -16,6 +16,7 @@
     "css-loader": "^0.28.9",
     "debug": "~2.6.9",
     "express": "~4.15.5",
+    "file-loader": "^1.1.6",
     "jade": "~1.11.0",
     "jquery": "^3.3.1",
     "jsx-loader": "^0.13.2",
