@@ -3,6 +3,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * 加载驱动程序
+ */
 class ArrayListDemo01 {
     public static void main(String[] args) {
         List<String> allList = null;    // 定义List对象
