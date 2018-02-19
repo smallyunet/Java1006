@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/* 选择器嵌套 */
+#main p {
+  color: #00ff00;
+  width: 97%; }
+  #main p .redbox {
+    background-color: #ff0000;
+    color: #000000; }
+
+/* 嵌套规则可用于避免父选择器重复 */
+#main {
+  width: 97%; }
+  #main p, #main div {
+    font-size: 2em; }
+    #main p a, #main div a {
+      font-weight: bold; }
+  #main pre {
+    font-size: 3em; }
+
+/* 引用父元素选择器& */
+a {
+  font-weight: bold;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+  body.firefox a {
+    font-weight: normal; }
+
+/* &将向上迭代所有父选择器 */
+#main {
+  color: block; }
+  #main a {
+    font-weight: bold; }
+    #main a:hover {
+      color: red; }
+
+/* &必须作为第一个字符出现，但支持后缀 */
+#main {
+  color: black; }
+  #main-sidebar {
+    border: 1px solid; }
+
+/* 嵌套属性，类似于font-族的各种属性，只需要写一次 */
+.funky {
+  font-family: fantasy;
+  font-size: 30em;
+  font-weight: bold; }
+
+/* 命名空间可以有自己的属性值 */
+.funky {
+  font: 20px/24px fantasy;
+    font-weigth: bold; }
+
+/* SassScript */
+/* 变量$，有作用域限制，_和-可以互换 */
+#main {
+  width: 5em; }
+
+/* 使用!global关键字定义全局变量 */
+#main {
+  width: 5em; }
+
+#sidebar {
+  width: 5em; }
+
+/* 插值 */
+p.foo {
+  border-color: blue; }
+
+/* @extend */
+.error, .seriousError {
+  border: 1px #f00;
+  background-color: #fdd; }
+
+.seriousError {
+  border-width: 3px; }
+
+/* serioousError继承了error的所有属性，并作为其子元素 */
+/* @at-root，常用的一个指令 */
+.parent {
+  color: #abc; }
+  .child {
+    color: #def; }
+
+/* @if，条件语句，可接@else */
+p {
+  border: 1px solid; }
+
+/* @for语句 */
+.item-1 {
+  width: 2em; }
+
+.item-2 {
+  width: 4em; }
+
+.item-3 {
+  width: 6em; }
+
+/* @each语句 */
+.a-icon {
+  background-image: url("/images/a.png"); }
+
+.b-icon {
+  background-image: url("/images/b.png"); }
+
+.c-icon {
+  background-image: url("/images/c.png"); }
+
+.d-icon {
+  background-image: url("/images/d.png"); }
+
+/* @mixin混入指令，定义样式 */
+/* @include引用混合样式 */
+.page-title {
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 4px;
+  margin-top: 10px; }
+
+/* 混入也支持带参数，像函数一样 */
+/* 引用混入的内容将出现在@content的位置 */
+* html #logo {
+  background-image: url(a.gif); }
+
+/* sass也支持自定义函数 */
+
+/*# sourceMappingURL=output.css.map */
