@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+    
+    <!-- angualr表达式，数字、字符串，还有对象数组也一样 -->
+
+    <div ng-app="" ng-init="quantity=1;cost=5;firstName='John';lastName='Doe'">
+        <p>我的第一个表达式： {{ 5 + 5 }}</p>
+        <p>总价： {{ quantity * cost }}</p>    <!-- 使用表达式 -->
+        <p>总价： <span ng-bind="quantity * cost"></span></p>  <!-- 使用ng-bind -->  
+        <p>姓名： {{ firstName + " " + lastName }}</p>
+        <p>姓名： <span ng-bind="firstName + ' ' + lastName"></span></p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+    
+    <!-- angualr指令 -->
+
+    <div ng-app="" ng-init="firstName='John';quantity=1;price=5;names=['a', 'b', 'c']">
+        
+        <p>在输入框中尝试输入：</p>
+        <p>姓名： <input type="text" ng-model="firstName"></p>
+        <p>输入内容为： {{ firstName }}</p>
+
+        <hr>
+        <h2>价格计算</h2>
+        数量：<input type="number" ng-model="quantity">
+        价格：<input type="number" ng-model="price">
+
+        <p><b>总价：</b> {{ quantity * price }}</p>
+
+        <ul>
+            <li ng-repeat="x in names">
+                {{ x }}
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+</html>

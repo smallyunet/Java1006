@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+</head>
+<body>
+    
+    <!-- Vue组件 -->
+
+    <div id="app">
+        <!-- <runoob></runoob> -->
+        <!-- <child message="Hello"></child> -->
+
+        <div>
+            <input v-model="parentMsg">
+            <br>
+            <child v-bind:message="parentMsg"></child>
+        </div>
+    </div>
+
+    <script>
+        // // 注册
+        // Vue.component('runoob', {
+        //     template: '<h1>自定义组件</h1>'
+        // });
+
+        // 子组件
+        // var Child = {
+        //     template: '<h1>自定义组件2</h1>'
+        // }
+
+        // 创建根实例
+        // new Vue({
+        //     el: '#app',
+        //     components: {
+        //         // runoob将只在父模板可用
+        //         'runoob': Child
+        //     }
+        // });
+
+        Vue.component('child', {
+            // 声明 props
+            props: ['message'],
+            template: '<span>{{ message }}</span>'
+        });
+        new Vue({
+            el: '#app',
+            data: {
+                parentMsg: '父组件内容'
+            }
+        })
+    </script>
+
+</body>
+</html>

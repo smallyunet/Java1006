@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 使用计算属性 -->
+
+    <div id="app">
+        <p>原始字符串：{{ message }}</p>
+        <p>反转字符串：{{ reversedMessage }}</p>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                message: 'Runoob!'
+            },
+            computed: {
+                // 计算属性的 getter
+                reversedMessage: function () {
+                  // `this` 指向 vm 实例
+                  return this.message.split('').reverse().join('')
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

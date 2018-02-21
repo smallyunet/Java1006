@@ -1,3 +1,7 @@
+### 2018.02.20
+
+![TypingSpeed](images/20.png)
+
 ### 2018.02.19
 
 ![TypingSpeed](images/19.png)
