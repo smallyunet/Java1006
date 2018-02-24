@@ -1,5 +1,5 @@
 
-## quickstart
+## quick-start
 
 Angular官方的教程： https://angular.cn/tutorial 
 
