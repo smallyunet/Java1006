@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+    
+    <!-- scope作用域 -->
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <input ng-model="name">
+        <h1>{{greeting}} {{nnn}}</h1>
+        <button ng-click='sayHello()'>点击</button>
+
+        <ul>
+            <li ng-repeat="x in names">{{x}} {{nnn}}</li>
+        </ul>
+   </div>
+
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller('myCtrl', function($scope, $rootScope) {
+            $scope.name = "smallyu";
+            $scope.names = ['a', 'b', 'c'];
+            $scope.sayHello = function() {
+                $scope.greeting = 'Hello ' + $scope.name + '!'
+            }
+            $rootScope.nnn = "666";
+
+            // 控制器中可嵌套function
+            // 控制器可由外部文件加载
+        });
+    </script>
+
+</body>
+</html>

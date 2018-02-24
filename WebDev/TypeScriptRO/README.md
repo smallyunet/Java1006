@@ -1,0 +1,1 @@
+菜鸟教程上的TypeScript入门教程： http://www.runoob.com/w3cnote/getting-started-with-typescript.html 

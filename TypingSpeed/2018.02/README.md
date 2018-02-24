@@ -1,3 +1,20 @@
+### 2018.02.24
+
+![TypingSpeed](images/24.7.png)
+![TypingSpeed](images/24.6.png)
+![TypingSpeed](images/24.5.png)
+![TypingSpeed](images/24.4.png)
+![TypingSpeed](images/24.3.png)
+![TypingSpeed](images/24.2.png)
+![TypingSpeed](images/24.1.png)
+
+### 2018.02.23
+
+![TypingSpeed](images/23.4.png)
+![TypingSpeed](images/23.3.png)
+![TypingSpeed](images/23.2.png)
+![TypingSpeed](images/23.1.png)
+
 ### 2018.02.20
 
 ![TypingSpeed](images/20.png)

@@ -3,8 +3,8 @@
 
 Tags: `Node.js` `Express` `MongoDB`      
 Tags: `React.js` `Vue.js` `Angular.js`    
-Tags: `Webpack`    
-Tags: `react-router` `Sass`    
+Tags: `Webpack` `Sass` `TypeScript`   
+Tags: `react-router`    
   
 ### 目录简介
 

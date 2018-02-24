@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <style>
+        /* ng提供了基于指令状态的css */
+        input.ng-invalid {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- 模型 -->
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+        名字：<input ng-model="name">
+
+        <!-- 双向绑定 -->
+
+        <h1>你输入了: {{name}}</h1>
+
+       
+        <!-- 验证用户输入 -->
+        <form name="myForm">
+            <input type="email" name="myAddress" ng-model="text">
+            <span ng-show="myForm.myAddress.$error.email">不是一个合法的邮箱地址</span>
+        </form>
+   </div>
+
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller('myCtrl', function($scope) {
+            $scope.name = "smallyu";
+        });
+    </script>
+
+</body>
+</html>
