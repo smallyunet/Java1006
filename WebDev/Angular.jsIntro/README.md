@@ -5,7 +5,7 @@ Angular官方的教程： https://angular.cn/tutorial
 
 实现了这样的效果：
 
-![preview.gif](quickstart/preview.gif)
+![preview.gif](quick-start/preview.gif)
 
 官方提供了框架和样式。 
 
