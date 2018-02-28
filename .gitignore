@@ -2,5 +2,6 @@ node_modules/
 .idea/
 .vscode/
 .sass-cache/
+.ipynb_checkpoints/
 
 *.class

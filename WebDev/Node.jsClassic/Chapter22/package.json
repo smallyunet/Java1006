@@ -1,0 +1,12 @@
+{
+  "name": "ohaithere-test",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./lib/ohaithere.js",
+  "scripts": {
+    "test": "node ./test/ohaithere.js"
+  },
+  "bin": "./bin/ohaithere.js",
+  "author": "",
+  "license": "ISC"
+}
