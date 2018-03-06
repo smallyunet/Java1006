@@ -56,25 +56,32 @@ router.get('/:id/del', function(req, res, next) {
   });
 });
 
+
 /**
  * 接口，返回所有数据，忽略_id和__v
  */
 router.get('/getAll', function(req, res, next) {
 
   // 分页相关
-  const pages = parseInt(req.query.pages);
-  const limit = parseInt(req.query.limit);
+  let pages = parseInt(req.query.pages);
+  let limit = parseInt(req.query.limit);
 
-  if ((typeof pages != 'number') | pages < 1) {
+  const search = req.query.search ? req.query.search : '.*';
+
+  if ((typeof pages != 'number') || pages < 1 || search != '.*') {
     pages = 1;
   }
-
-  if ((typeof limit != 'number' | limit < 1)) {
+  
+  if ((typeof limit != 'number') || limit < 1 || search != '.*') {
     limit = 10;
   }
 
   // 查表
-  Table.find({}, 
+  Table.find({
+      $or: [
+        { school: { $regex: search }}
+      ]
+    }, 
     { _id: 0, __v: 0}, 
     function(err, datas) {
     if (!err) {

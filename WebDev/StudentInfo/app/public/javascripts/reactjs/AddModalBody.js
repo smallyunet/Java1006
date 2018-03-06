@@ -27,6 +27,7 @@ class AddModalBody extends React.Component {
   
         this.handleInputChange = this.handleInputChange.bind(this);
         this.sendAddPost = this.sendAddPost.bind(this);
+        this.searchAll = this.searchAll.bind(this);
     }
   
     // 更新id值，自增，从getOne接口查询
@@ -49,6 +50,11 @@ class AddModalBody extends React.Component {
         this.setState({
             [event.target.name] : event.target.value
         });
+    }
+
+    // 搜索执行
+    searchAll(event) {
+        this.props.refreshAll( 0, 0, this.input.value);
     }
   
     // 发送新增请求，并关闭modal，得到最新ID
@@ -203,12 +209,24 @@ class AddModalBody extends React.Component {
                 </div>
     
                 <div className="row">
-                    <div className="col-10">
+                    <div className="col-7">
                         <Pages refreshAll={this.props.refreshAll}
                                 pagesLis={this.props.pagesLis}
                                 lastPage={this.props.lastPage}
                                 nowPage={this.props.nowPage} />
                     </div>
+
+                    <div className="col-3">
+                        <input 
+                            type="text" 
+                            className="form-control" 
+                            aria-label="school"
+                            aria-describedby="inputGroup-sizing-sm"
+                            placeholder="school..."
+                            ref={(input) => this.input = input}
+                            onChange={this.searchAll} />
+                    </div>
+
                     <div className="col-2">
                         <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
                             新增一条数据

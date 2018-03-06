@@ -61,7 +61,7 @@ class Body extends React.Component {
   /**
    * 刷新所有数据
    */
-  refreshAll (pages, limit) {
+  refreshAll (pages, limit, search) {
 
     $('#loading').show();
 
@@ -95,12 +95,13 @@ class Body extends React.Component {
       }
     } // 否则使用参数
     if (!limit) limit = 10;
-    
+    if (!search) search = '.*';
+
     // 保存当前页数
     this.setState({ nowPage: pages });
 
     // 得到数据
-    $.getJSON('/getAll?pages=' + pages + '&limit=' + limit, function(req) {
+    $.getJSON('/getAll?pages=' + pages + '&limit=' + limit + '&search=' + search, function(req) {
       if (req.results.length != 0) {
         _this.setState(req);
 
@@ -137,7 +138,7 @@ class Body extends React.Component {
                     lastPage={this.state.lastPage}
                     nowPage={this.state.nowPage} />
 
-        <div id="loading"><img src={loading} alt="loading.gif"/></div>
+        <div id="loading"><img src={loading} alt="loading.gif" style={{width:'60px', height:'60px'}} /></div>
 
       </div>
     );
