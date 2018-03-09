@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+    
+    <!-- service -->
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+      <p>{{ myUrl }}</p>
+
+      <hr>
+      <p>失效：{{ myWelcome }}</p>
+
+      <hr>
+      <p>延时：{{ myHeader }}</p>
+
+      <hr>
+      <p>延时反复：{{ theTime }}</p>
+
+      <hr>
+      <p>进制数：{{ hex }}</p>
+    </div>
+
+    <script>
+        var app = angular.module("myApp", [])
+
+        app.service('hexafy', function() {
+          this.myFunc = function (x) {
+            return x.toString(16);
+          }
+        })
+
+        app.controller('myCtrl', function($scope, $location, $http, $timeout, $interval, hexafy) {
+           $scope.myUrl = $location.absUrl()
+
+          //  本地跨域，无效
+           $http.get("test7.html").then(function (response) {
+            $scope.myWelcome = response.data
+           })
+
+           $timeout(function () {
+             $scope.myHeader = "How are you"
+           }, 3000)
+
+           $scope.theTime = new Date().toLocaleTimeString();
+           $interval(function () {
+             $scope.theTime = new Date().toLocaleTimeString()
+           }, 1000)
+
+           $scope.hex = hexafy.myFunc(253)
+        });
+    </script>
+
+</body>
+</html>

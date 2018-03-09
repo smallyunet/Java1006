@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+    
+    <!-- html dom -->
+
+<!-- 可用， 不可用 -->
+
+    <div ng-app="myApp" ng-init="mySwitch=true">
+
+     <p>
+       <button ng-disabled="mySwitch">点我</button>
+     </p>
+
+     <p>
+       <input type="checkbox" ng-model="mySwitch">按钮
+     </p>
+
+<!-- 显示，不显示 -->
+
+     <hr>
+
+     <p ng-show="true">我是可见的</p>
+
+     <p ng-show="flase">我是不可见的</p>
+
+<!-- 隐藏，不隐藏 -->
+
+     <hr>
+
+     <p ng-hide="true">我是隐藏的</p>
+
+     <p ng-hide="false">我不是隐藏的</p>
+
+    </div>
+
+    <script>
+        var app = angular.module("myApp", [])
+
+        app.controller('myCtrl', function($scope) {
+        });
+    </script>
+
+</body>
+</html>

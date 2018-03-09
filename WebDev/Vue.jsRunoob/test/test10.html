@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+<script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    
+  <!-- 自定义指令 -->
+
+  <p>页面载入时，input元素自动获取焦点</p>
+  <input v-focus>
+
+<hr>
+
+  <!-- 指令函数可以接受合法的js表达式 -->
+
+  <div v-runoob="{color: 'green', text: '菜鸟教程'}"></div>
+
+</div>
+
+<script>
+  
+  // 注册一个全局自定义指令，也可以在vue中注册局部指令
+  Vue.directive('focus', {
+    // 当在DOM中使用
+    inserted: function (el) {
+      el.focus()
+    }
+  })
+
+  Vue.directive('runoob', function (el, binding) {
+    el.innerHTML = binding.value.text
+    el.style.backgroundColor = binding.value.color
+  })
+
+  new Vue({
+    el: '#app'
+  })
+
+</script>
+</body>
+</html>
