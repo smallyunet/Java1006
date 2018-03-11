@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+  
+  var arr = []
+  arr = [1, 2, 3, 4]
+
+  var arr2 = new Array()
+  arr2.push(1)
+  arr2.push(2)
+  arr2.push(3)
+  arr2.push(4)
+  
+  // 导航栏
+  var arr = ['山西', '河北', '北京']
+  document.write('<ul style="list-style:none">')
+  arr.forEach(el => {
+    document.write('<li>' + el + '</li>')
+  })
+  document.write('</ul>')
+
+  document.write('<hr />')
+
+  // 下拉列表
+  document.write('<select name="" id="">')
+  arr.forEach(el => {
+    document.write('<option>' + el + '</option>')
+  })
+  document.write('</select>')
+
+  document.write('<hr />')
+
+  // 复选框
+  arr.forEach(el => {
+    document.write('<input type="checkbox">' + el)
+  })
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+  
+    // 判断成绩
+    var g = 67
+    if (g > 90) {
+      s = '优'
+    } else if (g > 80) {
+      s = '良'
+    } else if (g > 70) {
+      s = '中'
+    } else if (g > 60) {
+      s = '差'
+    } else {
+      s = '不及格'
+    }
+    console.log(s)
+  
+    // 奖品
+    var d = '二等奖'
+    switch (d) {
+      case '一等奖':
+        s = 'apple7'
+        break
+      case '二等奖':
+        s = '自行车'
+        break
+      case '三等奖':
+        s = '电饭煲'
+        break
+    }
+    console.log(s)
+
+
+    // 成绩 switch
+    var score = 77
+    switch (parseInt(score / 10)) {
+      case 6:
+        s = '差'
+        break
+      case 7:
+        s = '中'
+        break
+      case 8:
+        s = '良'
+        break
+      case 9:
+        s = '优'
+        break
+      case 10:
+        s = '优'
+        break
+      default:
+        s = '不及格'
+    }
+    console.log(s)
+
+  </script>
+
+</body>
+</html>

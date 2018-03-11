@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+  
+    var a = 10
+    var b = '2'
+    console.log(a + b)
+    console.log(a + parseInt(b))
+  
+    var c = '3.3a'
+    console.log(a + parseInt(c))    
+    console.log(a + parseFloat(c))    
+
+    c = 'a3.3'
+    console.log(a + parseInt(c))    
+    console.log(a + parseFloat(c)) 
+
+    console.log(a.toString() + 3) // 103
+    console.log('' + a + 3) // 103
+
+    // '23.55' -> int
+    console.log(parseInt('23.55'))
+
+  </script>
+
+</body>
+</html>

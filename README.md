@@ -5,6 +5,8 @@
 
 - CSS （CSS课堂内容）
 
+- JavaScript （js课堂内容）
+
 - Java （Java课堂内容）
 
 - WebDev （前端开发相关）
