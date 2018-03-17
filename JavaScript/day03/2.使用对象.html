@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+
+    // 给定字符串'hello world!'，将其中的world替换成everybody
+    var hello = 'hello world!'
+    var hello2 = hello.replace(/hello/, 'everybody')
+    console.log(hello2)
+
+    // 获取‘金子’和‘流水’放到数组
+    var str1 = '时间抓起来说是金子，抓不住就是流水'
+    var str2 = []
+    str2.push(str1.match(/金子/))
+    str2.push(str1.match(/流水/))
+    console.log(str2)
+
+    // 字符串转变成目录放在数组中
+    var book = '《教父》，《肖生克的救赎》，《卡萨布兰卡》，《教父续集》，《黑武士》'
+    var book2 = book.split('，')
+    console.log(book2)
+
+    // 生成0到10随机数
+    console.log(Math.random() * 10)
+
+    // 打印当前时间
+    setInterval(() => {
+      let date = new Date()
+      let y = date.getFullYear()
+      let m = date.getMonth() + 1
+      let d = date.getDate() + 1
+      let h = date.getHours()
+      let mi = date.getMinutes()
+      let s = date.getSeconds()
+      let dateStr = y + '年' + m + '月' + d + '日 ' + h + '时' + mi + '分' + s + '秒'
+      document.open()
+      document.write(dateStr)
+      document.close()
+    }, 1000)
+
+  </script>
+
+</body>
+
+</html>

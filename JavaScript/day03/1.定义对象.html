@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  
+    // 定义一个类
+    function Person (name, age) {
+      this.name = name
+      this.age = age
+
+      this.msg = function () {
+        console.log(this.name + '的年龄是' + this.age)
+      }
+    }
+
+    // 实例化
+    var p1 = new Person('p1', 20)
+    p1.msg()
+    p1.name = 'p11111111111111'
+    p1.msg()
+
+    var p2 = new Person('p2', 21)
+    p2.msg()
+    p2.age = '2111111111111111'
+    p2.msg()
+
+
+    // Object
+    var p3 = new Object()
+    p3.name = '你好'
+    p3.age = 666
+    p3.msg = function () {
+      console.log(this.name + '的年龄是' + this.age)
+    }
+    p3.msg()
+
+
+    // json
+    p5 = {
+      name: '世界',
+      age: 20000,
+      msg: function () {
+        console.log(this.name + '的年龄是' + this.age)
+      }
+    }
+    p5.msg()
+
+
+    // 内置对象
+
+    var str1 = new String('140724199605190032')
+    var str2 = '140724199605190032'
+    // 两种方式有区别
+    console.log(str1)
+    console.log(str2)
+
+  </script>
+</body>
+</html>

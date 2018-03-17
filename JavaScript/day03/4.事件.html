@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  <!-- 事件 -->
+  <input type="text" onchange="fun()">
+  <input type="text" id="username">
+  <input type="text" id="password">
+  <button onclick="check()"></button>
+
+  <!-- document -->
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+
+  <input type="checkbox" name='hobby' value="a">
+  <input type="checkbox" name='hobby' value="b">
+  <input type="checkbox" name='hobby' value="c"> 
+
+  <div class='cl'>4</div>
+  <div class='cl'>5</div>
+  <div class='cl'>6</div>
+
+  <script>
+  
+    function fun () {
+      alert('input的值被改变')
+    }
+
+    function check() {
+      // todo
+    }
+
+    var div = document.getElementsByTagName('div')
+    console.log(div)
+  
+    var hobby = document.getElementsByName('hobby')
+    console.log(hobby)
+
+    var cl = document.getElementsByClassName('cl')
+    console.log(cl)
+
+  </script>
+
+
+</body>
+</html>
