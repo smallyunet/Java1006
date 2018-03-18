@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+  
+    window.onload = () => { 
+      console.log('onload')
+      console.log(document.readyState)
+    }
+
+    console.log(document.readyState)
+  
+  </script>
+</head>
+<body>
+  
+  <div id="div1"></div>
+  <div class="div2">
+    <div id="div3">
+      <div id="div5"></div>
+      <div id="div6"></div>
+      <div id="div7"></div>
+      <div id="div8"></div>
+    </div>
+    <div id="div4"></div>
+  </div>
+  <div class="div2"></div>
+  <div class="div2"></div>
+
+  <script>
+  
+    var div1 = document.querySelector('#div1')
+    console.log(div1)
+
+    var div2 = document.querySelectorAll('div')
+    console.log(div2)
+
+    var div3 = document.querySelector('#div3')
+    console.log(div3.parentNode)
+    console.log(div3.childNodes)
+    console.log(div3.previousSibling)
+    console.log(div3.nextSibling)
+    console.log(div3.firstChild)
+    console.log(div3.lastChild)
+
+  </script>
+
+</body>
+</html>

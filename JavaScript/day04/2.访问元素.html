@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="abc" class="def">
+    <div id="def">123456</div>
+  </div>
+
+  <script>
+  
+    var div = document.getElementById('abc')
+    console.log(div.className)
+    div.onclick = () => { alert(123) }
+
+    // div.style.backgroundColor = "#987"
+
+    var div2 = document.createElement("div")
+    div2.innerHTML = "456"
+    div.appendChild(div2)
+    div.appendChild(div2)
+    
+    var p = document.createElement("p")
+    p.innerHTML = "789"
+    div.appendChild(p)
+
+    div2.parentNode.removeChild(p)
+
+    div.insertBefore(p, div2)
+
+    var div3 = document.createElement("div")
+    div3.innerHTML = "666"
+
+    div.replaceChild(div3, div2)
+
+</script>
+
+</body>
+</html>
