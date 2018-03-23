@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  
+    // js的RegExp是一个对象
+    // RegExp接收两个参数，第一个参数是正则表达式，第二个参数是匹配模式
+    // RegExp对象有三个方法，test()、exec()、compile()
+
+    var re = new RegExp('e')
+    // test()的返回值为布尔型，匹配或不匹配
+    console.log(re.test('Hello world! Hello world!'))
+    // exec()返回匹配的字符串，只返回一次
+    console.log(re.exec('Hello world! Hello world!'))
+    // compile()改变对象的匹配参数
+    console.log(re.compile('g'))
+    console.log(re.test('Hello world! Hello world!'))
+
+    // 表达式语法
+    // 修饰符 i g m
+    // 方括号 查找方括号之间任何字符、非任何字符
+    // 元字符 \w \d \s
+    // 量词 n{}
+
+  </script>
+</body>
+</html>
