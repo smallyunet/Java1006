@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  用户名：<input type="text" id="username" onkeyup="testUsername()"><span id="msg"></span>
+  <br>
+  ip地址：<input type="text" id="ip" onkeyup="testIp()"><span id="ipmsg"></span>
+  <br>
+  身份证：<input type="text" id="id" onkeyup="testId()"><span id="idmsg"></span>
+
+  <script>
+    
+    function testUsername () {
+      let username = document.getElementById('username').value
+      let re = /^[A-Za-z0-9_.]{6,12}$/
+      if (!re.test(username)) {
+        document.getElementById('msg').innerHTML = '用户名不正确'
+      } else {
+        document.getElementById('msg').innerHTML = ''
+      }
+    }
+
+    function testIp () {
+      let ip = document.getElementById('ip').value
+      let re = /^([0-2]{0,1}[0-9]{0,2}\.){0,3}[0-2]{0,1}[0-9]{0,2}$/
+      if (!re.test(ip)) {
+        document.getElementById('ipmsg').innerHTML = 'ip不正确'
+      } else {
+        document.getElementById('ipmsg').innerHTML = ''
+      }
+    }
+
+    function testId () {
+      let id = document.getElementById('id').value
+      let re = /^\d{6}(18|19|10)\d{2}(0\d|11|12)(0|1)\d\d{3}(\d|X|x)$/
+      if (!re.test(id)) {
+        document.getElementById('idmsg').innerHTML = 'id不正确'
+      } else {
+        document.getElementById('idmsg').innerHTML = ''
+      }
+    }
+
+
+  </script>
+
+</body>
+</html>
