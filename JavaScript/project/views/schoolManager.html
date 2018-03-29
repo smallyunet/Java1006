@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../layui/css/layui.css">
+  <style>
+    .header { margin: 20px 30px 0 30px; }
+    .container { margin: 0px 30px 20px 30px; }
+    .layui-field-title { margin-bottom: 10px }
+    #detail { padding: 20px; line-height: 27px;}
+    #detail span { font-weight: 500; margin-right: 5px; }
+
+    /* 搜索表单样式 */
+    .searchDiv { margin-bottom: 10px; }
+    .searchDiv > span { font-weight: 500 }
+    .searchDiv > input { font-weight: 500 }
+    .searchDiv .layui-form-checkbox { padding-right: 0; border: 0; height: 27px; line-height: 27px; }
+    .searchDiv .layui-form-checkbox:hover { border: 0 }
+    .searchDiv .layui-form-checkbox span { background-color: #fff; color: #747474; }
+    .searchDiv .layui-form-checked span { color: #7171c7; background: #ffe9e9; }
+    .searchDiv .layui-form-checkbox i { display: none }
+    .search-btn { margin-top: 10px; }
+    .label-btn { margin-top: 10px; width: 200px; }
+    .label-btn button, .search-btn button { padding: 0 25px; margin-top: 5px; }
+
+    .layui-field-title .layui-field-box { padding: 25px 0 5px 10px; }
+
+    #school-view { display: inline }
+    #department-view { display: inline }
+
+  </style>
+  <title>院校管理</title>
+</head>
+<body class="layui-bg-gray">
+
+  <div style="background-color: #fff;padding: 15px; margin: 20px;">
+    <div class="header">
+      <fieldset class="layui-elem-field  layui-field-title">
+        <legend>院校管理</legend>
+        <div class="layui-field-box">
+          <form class="layui-form" lay-filter="searchData">
+              <div class="searchDiv">
+                <span>大学学院：</span>
+                <input id="schoolSelectAll" field="allSchool" type="checkbox" lay-filter="schoolSelect" name="3" title="全部" checked>
+                <script id="searchSchool" type="text/html">
+                  {{# layui.each(d.list, function (index, item) { }}
+                    <input type="checkbox" name="{{index}}" 
+                      title="{{ item.school }}" 
+                      lay-filter="schoolSelect" 
+                      field="school" 
+                    />
+                  {{# }) }}
+                </script>
+                <div id="school-view"></div>
+              </div>
+              <div class="searchDiv">
+                <span>大学系部：</span>
+                <input type="checkbox" name="" title="全部" checked>
+                <script id="searchDepartment" type="text/html">
+                  {{# layui.each(d.list, function (index, item) { }}
+                    <input type="checkbox" name="" 
+                      title="{{ item }}"
+                      lay-filter="departmentSelect" 
+                    />
+                  {{# }) }}
+                </script>
+                <div id="department-view"></div>
+              </div>
+
+              <div class="search-btn">
+                <button class="layui-btn layui-btn-sm layui-btn-normal">默认重置</button>
+                <button class="layui-btn layui-btn-sm layui-btn-normal">确认查询</button>
+              </div>
+          </form>
+        </div>
+      </fieldset>
+    </div>
+    
+    <div class="container">
+      <!-- 表格 -->
+      <table id="classInfo" lay-filter="table"></table>
+      <script type="text/html" id="tableTool">
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+      </script>
+      <!-- 新增按钮 -->
+      <a style="margin-top: 10px; margin-bottom: 15px; padding: 0 20px;"
+        class="layui-btn layui-btn-normal layui-btn-sm" 
+        lay-event="add" href="addSchool.html" target="adminBody">新增一条记录</a>
+      <a style="margin-top: 10px; margin-bottom: 15px; padding: 0 20px;" class="layui-btn layui-btn-normal layui-btn-sm" lay-event="add" href="##" target="adminBody">批量删除</a>
+    </div>
+  </div>
+
+
+  <script src="../layui/layui.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script>
+
+    // 初始化的数据
+    let colsInitData = [
+      {type:'numbers'},
+      {type:'checkbox'},
+      {field: 'school', title: '院校名称', width: '120', align:'center', edit: 'text'},
+      {field: 'department', title: '院系名称', width: '120', align:'center', edit: 'text'},
+      {field: 'teacher', title: '院系负责人', width: '160', align:'center', edit: 'text'},
+      {field: 'phoneNumber', title: '负责人联系方式', width: '130', align:'center', edit: 'text'},
+      {field: 'toolbar', title: '操作', width:90, align:'center', toolbar: '#tableTool'}
+    ]
+
+    // 使用form组件
+    layui.use('form', function(){
+      var form = layui.form;
+    });
+
+    // 使用table组件
+    layui.use('table', function(){
+      var table = layui.table
+      //第一个实例
+      table.render({
+        elem: '#classInfo',
+        page: true, //开启分页
+        cols: [colsInitData],
+        data: [
+          {
+            school: '太原工业学院',
+            department: '电子工程系',
+            password: '499503799',
+            teacher: '赵云',
+            phoneNumber: '18623246666',
+          },{
+            school: '太原工业学院',
+            department: '电子工程系',
+            password: '499503799',
+            teacher: '赵云',
+            phoneNumber: '18623246666',
+          },{
+            school: '太原工业学院',
+            department: '电子工程系',
+            password: '499503799',
+            teacher: '赵云',
+            phoneNumber: '18623246666',
+          },{
+            school: '太原工业学院',
+            department: '电子工程系',
+            password: '499503799',
+            teacher: '赵云',
+            phoneNumber: '18623246666',
+          },{
+            school: '太原工业学院',
+            department: '电子工程系',
+            password: '499503799',
+            teacher: '赵云',
+            phoneNumber: '18623246666',
+          }
+        ]
+      });
+
+      table.on('tool(table)', function (obj) {
+        let data = obj.data,
+          layEvent = obj.event
+        console.log(data)
+        let str = '<div id=\"detail\"><span>日期：</span>'
+          + data.date
+          + '<br><span>成绩：</span>'
+          + data.score
+          + '<br><span>评价：</span>'
+          + data.content
+          + '<br><span>评价人：</span>'
+          + data.appraiser
+          + '</div>'
+        if (layEvent === 'detail') {
+          layer.open({
+            type:1,
+            content: str,
+            title: data.name,
+            shadeClose: true,
+            anim: 0,
+            maxmin: true,
+            area: '500px'
+          })          
+
+
+        } else if(layEvent === 'del'){
+          layer.confirm('确认删除这条记录？', {title: '警告'}, function(index){
+            obj.del(); //删除对应行（tr）的DOM结构
+            layer.close(index);
+            //向服务端发送删除指令
+          });
+        }
+      })
+
+      //监听单元格编辑
+      table.on('edit(table)', function(obj){
+        layer.msg('修改成功');
+      });
+    });
+
+    let school = [
+      {
+        'school': '太原工业学院',
+        'department': [
+          '机械工程系',
+          '电子工程系'
+        ]
+      },{
+        'school': '太原科技大学',
+        'department': [
+          '计算机工程系',
+          '理学系'
+        ]
+      },{
+        'school': '太原理工大学',
+        'department': [
+          '经济与管理系',
+          '自动化系'
+        ]
+      }
+    ]
+
+    var allDepartment = [
+        '机械工程系',
+        '电子工程系',
+        '计算机工程系',
+        '理学系',
+        '经济与管理系',
+        '自动化系'
+    ]
+
+    var department = []
+    let selected = []
+
+    // 使用form组件
+    layui.use('form', function(){
+      var form = layui.form;
+
+      let flag = 0  // 标识全选按钮是否选中
+
+      // 监听学校院系
+      form.on('checkbox(schoolSelect)', function (data) {
+
+        let str = ''
+        
+        $('#schoolSelectAll').attr("checked", false)
+        if (data.elem.name == 3) {  // 如果点击全部
+          // 取消其他按钮选中状态
+          $("input[field='school']").prop({checked: false})
+          // 添加索引
+          selected.splice(0, selected.length)
+          if (data.elem.checked) {
+            selected.push(data.elem.name)
+            flag = 1
+          }
+        } else {  // 如果点击其他，取消全部内容
+          $("input[field='allSchool']").prop({checked: false})
+          // 生成索引
+          if (flag) {
+            selected.splice(0, selected.length)
+            flag = 0
+          }
+          if (data.elem.checked) {  // 如果选中
+            selected.push(data.elem.name) // 添加索引
+          } else {  // 否则
+            let index = selected.indexOf(data.elem.name)
+            selected.splice(index, 1) // 删除索引
+          }
+        }
+        form.render('checkbox')
+
+        let selectContent = {
+          '0': [
+            '机械工程系',
+            '电子工程系'
+          ],
+          '1': [
+            '计算机工程系',
+            '理学系'
+          ],
+          '2': [
+            '经济与管理系',
+            '自动化系'
+          ],
+          '3': [
+              '机械工程系',
+              '电子工程系',
+              '计算机工程系',
+              '理学系',
+              '经济与管理系',
+              '自动化系'
+          ]
+        }
+        
+        let department = []
+        for (i of selected) {
+          for (item of selectContent[i]) {
+            department.push(item)
+          }
+        }
+        
+        for (i of department) {
+          str += '<div class="layui-unselect layui-form-checkbox" lay-skin=""><span>'
+            + i
+            + '</span><i class="layui-icon"></i></div><input type="checkbox" name="1" title="'
+            + i 
+            +'" lay-filter="schoolSelect">'
+        }
+
+        $('#department-view').html(str)
+      })
+    });
+
+    // 使用模板引擎
+    layui.use('laytpl', function () {
+      let laytpl = layui.laytpl
+
+     
+      // 搜索
+      let data2 = {
+        "list": school
+      }
+      let getTpl2 = searchSchool.innerHTML,
+        view2 = $('#school-view')
+      laytpl(getTpl2).render(data2, function (html) {
+        view2.html(html)
+      })
+
+      // 系
+      let data3 = {
+        "list": allDepartment
+      }
+      let getTpl3 = searchDepartment.innerHTML,
+        view3 = $('#department-view')
+      laytpl(getTpl3).render(data3, function (html) {
+        view3.html(html)
+      })
+    })
+    
+  </script>
+</body>
+</html>

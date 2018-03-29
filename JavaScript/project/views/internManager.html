@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../layui/css/layui.css">
+  <style>
+    /* 头部 */
+    .header { margin-top: 20px; }
+    /* 主体 */
+    .container { margin-top: 20px; }
+    #label { margin-bottom: -10px; }
+    #label div { margin-bottom: 15px}
+    #date, #date1 { height: 25px; }
+    /* 搜索表单样式 */
+    .searchDiv { margin-bottom: 10px; }
+    .searchDiv > span { font-weight: 500 }
+    .searchDiv > input { font-weight: 500 }
+    .searchDiv .layui-form-checkbox { padding-right: 0; border: 0; height: 27px; line-height: 27px; }
+    .searchDiv .layui-form-checkbox:hover { border: 0 }
+    .searchDiv .layui-form-checkbox span { background-color: #fff; color: #747474; }
+    .searchDiv .layui-form-checked span { color: #7171c7; background: #ffe9e9; }
+    .searchDiv .layui-form-checkbox i { display: none }
+    .search-btn { margin-top: 10px; }
+    .label-btn { margin-top: 10px; width: 200px; }
+    .label-btn button, .search-btn button { padding: 0 25px; margin-top: 5px; }
+
+    #school-view { display: inline }
+    #department-view { display: inline }
+
+    .header, .container { margin: 20px 30px; }
+    .layui-elem-field { padding: 5px; }
+  </style>
+  <title>实习生信息</title>
+</head>
+<body class="layui-bg-gray">
+
+  <div style="background-color: #fff;padding: 15px; margin: 20px;">
+    <div class="header">
+      <fieldset class="layui-elem-field  layui-field-title">
+        <legend>实习生信息</legend>
+        <div class="layui-field-box">
+          <form class="layui-form" lay-filter="searchData">
+            <div class="searchDiv">
+              <span>入学年份：</span>
+              <input type="checkbox" name="" title="全部" checked>
+              <input type="checkbox" name="" title="2016">
+              <input type="checkbox" name="" title="2017">
+              <input type="checkbox" name="" title="2018">
+              <input type="checkbox" name="" title="2019">
+              <input type="checkbox" name="" title="2020">
+              <input type="checkbox" name="" title="其它">
+            </div>
+            <div class="searchDiv">
+              <span>大学学院：</span>
+              <input id="schoolSelectAll" field="allSchool" type="checkbox" lay-filter="schoolSelect" name="3" title="全部" checked>
+              <script id="searchSchool" type="text/html">
+                {{# layui.each(d.list, function (index, item) { }}
+                  <input type="checkbox" name="{{index}}" 
+                    title="{{ item.school }}" 
+                    lay-filter="schoolSelect" 
+                    field="school" 
+                  />
+                {{# }) }}
+              </script>
+              <div id="school-view"></div>
+            </div>
+            <div class="searchDiv">
+              <span>大学系部：</span>
+              <input type="checkbox" name="" title="全部" checked>
+              <script id="searchDepartment" type="text/html">
+                {{# layui.each(d.list, function (index, item) { }}
+                  <input type="checkbox" name="" 
+                    title="{{ item }}"
+                    lay-filter="departmentSelect" 
+                  />
+                {{# }) }}
+              </script>
+              <div id="department-view"></div>
+            </div>
+            <div class="searchDiv">
+              <span>实习方向：</span>
+              <input type="checkbox" name="" title="全部" checked>
+              <input type="checkbox" name="" title="物联网">
+              <input type="checkbox" name="" title="Java">
+              <input type="checkbox" name="" title="前端开发">
+              <input type="checkbox" name="" title="Python">
+              <input type="checkbox" name="" title="大数据">
+              <input type="checkbox" name="" title="其它">
+            </div>
+            <div class="layui-form-item layui-inline" style="margin-top: 10px;">
+                <label class="layui-form-label" style="width: 30px; padding: 4px 15px;">姓名</label>
+                <input type="text" name="title" style="height: 30px;" placeholder="请输入姓名" autocomplete="off" class="layui-input layui-input-inline">
+                <label class="layui-form-label" style="width: 60px; padding: 4px 15px;">大学班号</label>
+                <input type="text" name="title" style="height: 30px;" placeholder="请输入大学班号" autocomplete="off" class="layui-input layui-input-inline">
+                <button class="layui-btn layui-btn-sm layui-btn-normal" style="margin-left: 20px; padding: 0 20px;">确认查询</button>
+            </div>
+          </form>
+        </div>
+      </fieldset>
+    </div>
+    
+    <div class="container">
+      <!-- 表格前标签选择 -->
+      <fieldset class="layui-elem-field">
+        <legend>显示标签</legend>
+        <div class="layui-field-box" id="label">
+          <form class="layui-form">
+            <script id="labelContent" type="text/html">
+              {{# layui.each(d.list, function (index, item) { }}
+              <input type="checkbox" name="{{ item.field }}" 
+              lay-skin="primary" title="{{ item.title }}" 
+              field="label"
+              lay-filter="labelSelect" 
+              {{# if(checkLable(item.field)) { }}
+              checked
+              {{# } }}
+              />
+              {{# }) }}
+            </script>
+            <div id="label-view" style="display:inline"></div>
+            <input type="checkbox" name="all" lay-skin="primary" title="全选" 
+              lay-filter="allLabelSelect" />
+          </form>
+        </div>
+      </fieldset>
+      <!-- 表格 -->
+      <table id="classInfo" lay-filter="table"></table>
+      <script type="text/html" id="tableTool">
+        <a class="layui-btn layui-btn-xs" lay-event="edit" href="editIntern.html" target="adminBody">编辑</a>
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+      </script>
+      <a style="margin-top: 10px; margin-bottom: 15px; padding: 0 20px;" class="layui-btn layui-btn-normal layui-btn-sm" lay-event="add" href="addIntern.html" target="adminBody">新增一条记录</a>
+      <a style="margin-top: 10px; margin-bottom: 15px; padding: 0 20px;" class="layui-btn layui-btn-normal layui-btn-sm" lay-event="add" href="##" target="adminBody">批量删除</a>
+      <a style="margin-top: 10px; margin-bottom: 15px; padding: 0 20px;" class="layui-btn layui-btn-normal layui-btn-sm" lay-event="add" href="##" target="adminBody">导出Excel</a>
+    </div>
+  </div>
+
+
+
+  <script src="../layui/layui.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script>
+
+    // 默认所有标签，排除班号，班号不可操作
+    let labelData = [
+      {field: 'gender', title: '性别'},
+      {field: 'birthday', title: '出生日期'},
+      {field: 'startYear', title: '入学年份'},
+      {field: 'school', title: '学校'},
+      {field: 'department', title: '院系'},
+      {field: 'profession', title: '专业'},
+      {field: 'classId', title: '大学班号'},
+      {field: 'practiceClass', title: '实习班号'},
+      {field: 'practiceDirection', title: '实习方向'},
+      {field: 'birthplace', title: '籍贯'},
+      {field: 'phoneNumber', title: '手机号'},
+      {field: 'qq', title: 'QQ'},
+      {field: 'universityJob', title: '大学职务'},
+      {field: 'technicalStatus', title: '个人技术状况'},
+      {field: 'projectExper', title: '项目经验'},
+      {field: 'trainingExper', title: '培训经历'},
+      {field: 'awards', title: '获奖情况'},
+      {field: 'socialPractice', title: '社会实践'},
+      {field: 'hobby', title: '兴趣爱好'},
+      {field: 'careerGoal', title: '职业目标'},
+      {field: 'customGoal', title: '自定义职业目标'},
+      {field: 'remark', title: '备注'}
+    ]
+
+    // 默认未选中的标签
+    let unselectLabel = [
+      'gender',
+      'birthday',
+      'practiceClass',
+      'birthplace',
+      'phoneNumber',
+      'qq',
+      'universityJob',
+      'technicalStatus',
+      'projectExper',
+      'trainingExper',
+      'awards',
+      'socialPractice',
+      'hobby',
+      'careerGoal',
+      'customGoal',
+      'remark',
+    ]
+
+    // 初始化的数据
+    let colsInitData = [
+      {type:'numbers'},
+      {type:'checkbox'},
+      {field: 'name', title: '姓名', width: '80', align:'center'},
+      {field: 'gender', title: '性别', width: '70', align:'center'},
+      {field: 'birthday', title: '出生日期', width: '100', align:'center'},
+      {field: 'startYear', title: '入学年份', width: '88', align:'center'},
+      {field: 'school', title: '学校', width: '120', align:'center'},
+      {field: 'department', title: '院系', width: '100', align:'center'},
+      {field: 'profession', title: '专业', width: '100', align:'center'},
+      {field: 'classId', title: '大学班号', width: '90', align:'center'},
+      {field: 'practiceClass', title: '实习班号', width: '70', align:'center'},
+      {field: 'practiceDirection', title: '实习方向', width: '90', align:'center'},
+      {field: 'birthplace', title: '籍贯', width: '120', align:'center'},
+      {field: 'phoneNumber', title: '手机号', width: '120', align:'center'},
+      {field: 'qq', title: 'QQ', width: '110', align:'center'},
+      {field: 'universityJob', title: '大学职务', width: '90', align:'center'},
+      {field: 'technicalStatus', title: '个人技术状况', width: '120', align:'center'},
+      {field: 'projectExper', title: '项目经验', width: '90', align:'center'},
+      {field: 'trainingExper', title: '培训经历', width: '90', align:'center'},
+      {field: 'awards', title: '获奖情况', width: '90', align:'center'},
+      {field: 'socialPractice', title: '社会实践', width: '90', align:'center'},
+      {field: 'hobby', title: '兴趣爱好', width: '90', align:'center'},
+      {field: 'careerGoal', title: '职业目标', width: '90', align:'center'},
+      {field: 'customGoal', title: '自定义职业目标', width: '130', align:'center'},
+      {field: 'remark', title: '备注', width: '60', align:'center'},
+      {field: 'toolbar', title: '操作', width:120, align:'center', toolbar: '#tableTool'}
+    ]
+
+    /*********** form数据 **********/
+    let school = [
+      {
+        'school': '太原工业学院',
+        'department': [
+          '机械工程系',
+          '电子工程系'
+        ]
+      },{
+        'school': '太原科技大学',
+        'department': [
+          '计算机工程系',
+          '理学系'
+        ]
+      },{
+        'school': '太原理工大学',
+        'department': [
+          '经济与管理系',
+          '自动化系'
+        ]
+      }
+    ]
+
+    var allDepartment = [
+        '机械工程系',
+        '电子工程系',
+        '计算机工程系',
+        '理学系',
+        '经济与管理系',
+        '自动化系'
+    ]
+
+    var department = []
+    let selected = []
+
+    // 使用form组件
+    layui.use('form', function(){
+      var form = layui.form;
+
+      // 监听表格标签
+      form.on('checkbox(labelSelect)', function (data) {
+        if (data.elem.checked) {
+          changeDisplay (data.elem.name, true)
+        } else {
+          changeDisplay (data.elem.name, false)
+        }
+      })
+      let flag = 0  // 标识全选按钮是否选中
+
+      form.on('checkbox(allLabelSelect)', function (data) {
+        if (data.elem.checked) {
+          $('input[field="label"]').prop("checked", true)
+          for (i of labelData) {
+            changeDisplay (i.field, true)
+          }
+        } else {
+          $('input[field="label"]').prop("checked", false)
+          for (i of labelData) {
+            changeDisplay (i.field, false)
+          }
+        }
+        form.render('checkbox')
+      })
+
+      // 监听学校院系
+      form.on('checkbox(schoolSelect)', function (data) {
+
+        let str = ''
+        
+        $('#schoolSelectAll').attr("checked", false)
+        if (data.elem.name == 3) {  // 如果点击全部
+          // 取消其他按钮选中状态
+          $("input[field='school']").prop({checked: false})
+          // 添加索引
+          selected.splice(0, selected.length)
+          if (data.elem.checked) {
+            selected.push(data.elem.name)
+            flag = 1
+          }
+        } else {  // 如果点击其他，取消全部内容
+          $("input[field='allSchool']").prop({checked: false})
+          // 生成索引
+          if (flag) {
+            selected.splice(0, selected.length)
+            flag = 0
+          }
+          if (data.elem.checked) {  // 如果选中
+            selected.push(data.elem.name) // 添加索引
+          } else {  // 否则
+            let index = selected.indexOf(data.elem.name)
+            selected.splice(index, 1) // 删除索引
+          }
+        }
+        form.render('checkbox')
+
+        let selectContent = {
+          '0': [
+            '机械工程系',
+            '电子工程系'
+          ],
+          '1': [
+            '计算机工程系',
+            '理学系'
+          ],
+          '2': [
+            '经济与管理系',
+            '自动化系'
+          ],
+          '3': [
+              '机械工程系',
+              '电子工程系',
+              '计算机工程系',
+              '理学系',
+              '经济与管理系',
+              '自动化系'
+          ]
+        }
+        
+        let department = []
+        for (i of selected) {
+          for (item of selectContent[i]) {
+            department.push(item)
+          }
+        }
+        
+        for (i of department) {
+          str += '<div class="layui-unselect layui-form-checkbox" lay-skin=""><span>'
+            + i
+            + '</span><i class="layui-icon"></i></div><input type="checkbox" name="1" title="'
+            + i 
+            +'" lay-filter="schoolSelect">'
+        }
+
+        $('#department-view').html(str)
+      })
+    });
+
+    // 使用模板引擎
+    layui.use('laytpl', function () {
+      let laytpl = layui.laytpl
+
+      // 表格头
+      let data = {
+        "list": labelData
+      }
+      let getTpl = labelContent.innerHTML,
+        view = $('#label-view')
+      laytpl(getTpl).render(data, function (html) {
+        view.html(html)
+      })
+
+      // 搜索
+      let data2 = {
+        "list": school
+      }
+      let getTpl2 = searchSchool.innerHTML,
+        view2 = $('#school-view')
+      laytpl(getTpl2).render(data2, function (html) {
+        view2.html(html)
+      })
+
+      // 系
+      let data3 = {
+        "list": allDepartment
+      }
+      let getTpl3 = searchDepartment.innerHTML,
+        view3 = $('#department-view')
+      laytpl(getTpl3).render(data3, function (html) {
+        view3.html(html)
+      })
+    })
+
+
+    // 使用table组件
+    layui.use('table', function(){
+      var table = layui.table
+      //第一个实例
+      table.render({
+        elem: '#classInfo',
+        page: true, //开启分页
+        cols: [colsInitData],
+        data: [
+          {
+            'name': 'smallyu',
+            'gender': 'male',
+            'birthday': '19910101',
+            'startYear': '2017',
+            'school': '太原工业学院',
+            'department': '电子工程系',
+            'profession': '通信工程',
+            'classId': '1520271',
+            'practiceClass': '1006',
+            'practiceDirection': 'Java',
+            'birthplace': '山西省河北市',
+            'phoneNumber': '18649332424',
+            'qq': '499503798',
+            'universityJob': '你猜',
+            'technicalStatus': '一般',
+            'projectExper': '项目经历',
+            'trainingExper': '培训经历',
+            'awards': '获奖情况',
+            'socialPractice': '社会经验',
+            'hobby': '兴趣爱好',
+            'careerGoal': '职业目标',
+            'customGoal': '自定义职业目标',
+            'remark': '无'
+          },{
+            'name': 'smallyu',
+            'gender': 'male',
+            'birthday': '19910101',
+            'startYear': '2017',
+            'school': '太原工业学院',
+            'department': '电子工程系',
+            'profession': '通信工程',
+            'classId': '1520271',
+            'practiceClass': '1006',
+            'practiceDirection': 'Java',
+            'birthplace': '山西省河北市',
+            'phoneNumber': '18649332424',
+            'qq': '499503798',
+            'universityJob': '你猜',
+            'technicalStatus': '一般',
+            'projectExper': '项目经历',
+            'trainingExper': '培训经历',
+            'awards': '获奖情况',
+            'socialPractice': '社会经验',
+            'hobby': '兴趣爱好',
+            'careerGoal': '职业目标',
+            'customGoal': '自定义职业目标',
+            'remark': '无'
+          },{
+            'name': 'smallyu',
+            'gender': 'male',
+            'birthday': '19910101',
+            'startYear': '2017',
+            'school': '太原工业学院',
+            'department': '电子工程系',
+            'profession': '通信工程',
+            'classId': '1520271',
+            'practiceClass': '1006',
+            'practiceDirection': 'Java',
+            'birthplace': '山西省河北市',
+            'phoneNumber': '18649332424',
+            'qq': '499503798',
+            'universityJob': '你猜',
+            'technicalStatus': '一般',
+            'projectExper': '项目经历',
+            'trainingExper': '培训经历',
+            'awards': '获奖情况',
+            'socialPractice': '社会经验',
+            'hobby': '兴趣爱好',
+            'careerGoal': '职业目标',
+            'customGoal': '自定义职业目标',
+            'remark': '无'
+          },{
+            'name': 'smallyu',
+            'gender': 'male',
+            'birthday': '19910101',
+            'startYear': '2017',
+            'school': '太原工业学院',
+            'department': '电子工程系',
+            'profession': '通信工程',
+            'classId': '1520271',
+            'practiceClass': '1006',
+            'practiceDirection': 'Java',
+            'birthplace': '山西省河北市',
+            'phoneNumber': '18649332424',
+            'qq': '499503798',
+            'universityJob': '你猜',
+            'technicalStatus': '一般',
+            'projectExper': '项目经历',
+            'trainingExper': '培训经历',
+            'awards': '获奖情况',
+            'socialPractice': '社会经验',
+            'hobby': '兴趣爱好',
+            'careerGoal': '职业目标',
+            'customGoal': '自定义职业目标',
+            'remark': '无'
+          },{
+            'name': 'smallyu',
+            'gender': 'male',
+            'birthday': '19910101',
+            'startYear': '2017',
+            'school': '太原工业学院',
+            'department': '电子工程系',
+            'profession': '通信工程',
+            'classId': '1520271',
+            'practiceClass': '1006',
+            'practiceDirection': 'Java',
+            'birthplace': '山西省河北市',
+            'phoneNumber': '18649332424',
+            'qq': '499503798',
+            'universityJob': '你猜',
+            'technicalStatus': '一般',
+            'projectExper': '项目经历',
+            'trainingExper': '培训经历',
+            'awards': '获奖情况',
+            'socialPractice': '社会经验',
+            'hobby': '兴趣爱好',
+            'careerGoal': '职业目标',
+            'customGoal': '自定义职业目标',
+            'remark': '无'
+          }
+        ],
+        done: function () {
+          for (item of unselectLabel) {
+            changeDisplay (item, false)
+          }
+        }
+      });
+
+      table.on('tool(table)', function (obj) {
+        let data = obj.data,
+          layEvent = obj.event
+        if(layEvent === 'del'){
+          layer.confirm('确认删除这条记录？', {title: '警告'}, function(index){
+            obj.del(); //删除对应行（tr）的DOM结构
+            layer.close(index);
+            //向服务端发送删除指令
+          });
+        }
+      })
+    });
+    
+    // 使用日期组件
+    layui.use('laydate', function() {
+      var laydate = layui.laydate
+      laydate.render({
+        elem: '#date'
+      })
+      laydate.render({
+        elem: '#date1'
+      })
+    })
+
+    /**
+     * 返回标签被选中的状态
+     * true为选中
+     */
+     function checkLable(item) {
+      return unselectLabel.indexOf(item) == -1
+    }
+
+    /**
+     * 改变表格某一列显示状态 
+     */
+    function changeDisplay (item, status) {
+      if (status) {
+        $('#classInfo').next().find("[data-field=" + item + "]").css('display','')
+      } else {
+        $('#classInfo').next().find("[data-field=" + item + "]").css('display','none')
+      }
+    }
+
+  </script>
+</body>
+</html>

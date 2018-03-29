@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../layui/css/layui.css">
+  <style>
+    .header { margin: 20px 30px 0 30px; }
+    .container { margin: 0px 30px 20px 30px; }
+    .layui-field-title { margin-bottom: 10px }
+    #detail { padding: 20px; line-height: 27px;}
+    #detail span { font-weight: 500; margin-right: 5px; }
+  </style>
+  <title>实习评价</title>
+</head>
+<body class="layui-bg-gray">
+
+  <div style="background-color: #fff;padding: 15px; margin: 20px;">
+    <div class="header">
+      <fieldset class="layui-elem-field  layui-field-title">
+        <legend>实习评价</legend>
+        <div class="layui-field-box">
+          <form class="layui-form" lay-filter="searchData">
+            <div class="layui-form-item layui-inline" style="margin-top: 10px;">
+                <label class="layui-form-label" style="width: 30px; padding: 4px 15px;">姓名</label>
+                <input type="text" name="title" style="height: 30px;" placeholder="请输入姓名" autocomplete="off" class="layui-input layui-input-inline">
+                <button class="layui-btn layui-btn-sm layui-btn-normal" style="margin-left: 20px; padding: 0 20px;">确认查询</button>
+            </div>
+          </form>
+        </div>
+      </fieldset>
+    </div>
+    
+    <div class="container">
+      <!-- 表格 -->
+      <table id="classInfo" lay-filter="table"></table>
+      <script type="text/html" id="tableTool">
+        <a class="layui-btn layui-btn-xs layui-btn-primary" lay-event="detail">查看</a>
+        <a class="layui-btn layui-btn-xs" lay-event="edit" href="editEvaluation.html" target="adminBody">编辑</a>
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+      </script>
+      <!-- 新增按钮 -->
+      <a style="margin-top: 10px; margin-bottom: 15px; padding: 0 20px;" class="layui-btn layui-btn-normal layui-btn-sm" lay-event="add" href="addEvaluation.html" target="adminBody">新增一条记录</a>
+      <a style="margin-top: 10px; margin-bottom: 15px; padding: 0 20px;" class="layui-btn layui-btn-normal layui-btn-sm" lay-event="add" href="##" target="adminBody">批量删除</a>
+    </div>
+  </div>
+
+
+  <script src="../layui/layui.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script>
+
+    // 初始化的数据
+    let colsInitData = [
+      {type:'numbers'},
+      {type:'checkbox'},
+      {field: 'name', title: '姓名', width: '110', align:'center'},
+      {field: 'content', title: '实习评价', width: '230', align:'center'},
+      {field: 'score', title: '成绩', width: '80', align:'center'},
+      {field: 'appraiser', title: '评价人', width: '110', align:'center', edit: 'text'},
+      {field: 'date', title: '评价日期', width: '110', align:'center'},
+      {field: 'toolbar', title: '操作', width:165, align:'center', toolbar: '#tableTool'}
+    ]
+
+    // 使用form组件
+    layui.use('form', function(){
+      var form = layui.form;
+     
+    });
+
+    // 使用table组件
+    layui.use('table', function(){
+      var table = layui.table
+      //第一个实例
+      table.render({
+        elem: '#classInfo',
+        page: true, //开启分页
+        cols: [colsInitData],
+        data: [
+          {
+            name: 'smallyu',
+            content: '女神：你能让这个论坛的人都吵起来，我今晚就跟你走。程序猿：PHP语言是最好的语言！论坛炸锅了，各种吵架。女神：服了你了，我们走吧，你想干啥都行。程序猿：今天不行，我一定要说服他们，PHP语言是最好的语言。',
+            score: '良',
+            appraiser: '蜻蜓队长',
+            date: '2018.03.16'
+          },{
+            name: 'smallyu',
+            content: '女神：你能让这个论坛的人都吵起来，我今晚就跟你走。程序猿：PHP语言是最好的语言！论坛炸锅了，各种吵架。女神：服了你了，我们走吧，你想干啥都行。程序猿：今天不行，我一定要说服他们，PHP语言是最好的语言。',
+            score: '良',
+            appraiser: '蜻蜓队长',
+            date: '2018.03.16'
+          },{
+            name: 'smallyu',
+            content: '女神：你能让这个论坛的人都吵起来，我今晚就跟你走。程序猿：PHP语言是最好的语言！论坛炸锅了，各种吵架。女神：服了你了，我们走吧，你想干啥都行。程序猿：今天不行，我一定要说服他们，PHP语言是最好的语言。',
+            score: '良',
+            appraiser: '蜻蜓队长',
+            date: '2018.03.16'
+          },{
+            name: 'smallyu',
+            content: '女神：你能让这个论坛的人都吵起来，我今晚就跟你走。程序猿：PHP语言是最好的语言！论坛炸锅了，各种吵架。女神：服了你了，我们走吧，你想干啥都行。程序猿：今天不行，我一定要说服他们，PHP语言是最好的语言。',
+            score: '良',
+            appraiser: '蜻蜓队长',
+            date: '2018.03.16'
+          },{
+            name: 'smallyu',
+            content: '女神：你能让这个论坛的人都吵起来，我今晚就跟你走。程序猿：PHP语言是最好的语言！论坛炸锅了，各种吵架。女神：服了你了，我们走吧，你想干啥都行。程序猿：今天不行，我一定要说服他们，PHP语言是最好的语言。',
+            score: '良',
+            appraiser: '蜻蜓队长',
+            date: '2018.03.16'
+          }
+        ]
+      });
+
+      table.on('tool(table)', function (obj) {
+        let data = obj.data,
+          layEvent = obj.event
+        console.log(data)
+        let str = '<div id=\"detail\"><span>日期：</span>'
+          + data.date
+          + '<br><span>成绩：</span>'
+          + data.score
+          + '<br><span>评价：</span>'
+          + data.content
+          + '<br><span>评价人：</span>'
+          + data.appraiser
+          + '</div>'
+        if (layEvent === 'detail') {
+          layer.open({
+            type:1,
+            content: str,
+            title: data.name,
+            shadeClose: true,
+            anim: 0,
+            maxmin: true,
+            area: '500px'
+          })          
+
+
+        } else if(layEvent === 'del'){
+          layer.confirm('确认删除这条记录？', {title: '警告'}, function(index){
+            obj.del(); //删除对应行（tr）的DOM结构
+            layer.close(index);
+            //向服务端发送删除指令
+          });
+        }
+      })
+
+      //监听单元格编辑
+      table.on('edit(table)', function(obj){
+        layer.msg('修改成功');
+      });
+    });
+    
+  </script>
+</body>
+</html>
