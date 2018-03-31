@@ -17,11 +17,11 @@
 
 - HTML/CSS
 
-http://ychs-web.smallyu.net/demo1/  （仿站，企业官网）
+    - http://ychs-web.smallyu.net/demo1/  （仿站，企业官网）
 
-http://ychs-web.smallyu.net/demo2/  （仿站，婚纱网站）
+    - http://ychs-web.smallyu.net/demo2/  （仿站，婚纱网站）
 
 
 - JavaScript
 
-http://ychs-web.smallyu.net/demo4/  （英才科技实习生管理系统，前端模板）
+    - http://ychs-web.smallyu.net/demo4/  （英才科技实习生管理系统，前端模板）
